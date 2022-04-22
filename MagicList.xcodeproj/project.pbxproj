@@ -27,6 +27,8 @@
 		BFF1FBCD2812C66100142235 /* Altone-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BFF1FBC52812C66100142235 /* Altone-ExtraBold.ttf */; };
 		BFF1FBCF2812C66D00142235 /* UIFont+.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF1FBCE2812C66D00142235 /* UIFont+.swift */; };
 		BFF1FBD12812C6E800142235 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF1FBD02812C6E800142235 /* NotificationManager.swift */; };
+		BFF1FBD42812FBAB00142235 /* Color+.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF1FBD32812FBAB00142235 /* Color+.swift */; };
+		BFF1FBD82812FDAB00142235 /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF1FBD72812FDAB00142235 /* UIColor+.swift */; };
 		CB5C7B7F110E56E492657A9B /* Pods_MagicList.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90DFE6F1A2A1A56B0E8DB31F /* Pods_MagicList.framework */; };
 /* End PBXBuildFile section */
 
@@ -56,6 +58,8 @@
 		BFF1FBC52812C66100142235 /* Altone-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Altone-ExtraBold.ttf"; sourceTree = "<group>"; };
 		BFF1FBCE2812C66D00142235 /* UIFont+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+.swift"; sourceTree = "<group>"; };
 		BFF1FBD02812C6E800142235 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
+		BFF1FBD32812FBAB00142235 /* Color+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+.swift"; sourceTree = "<group>"; };
+		BFF1FBD72812FDAB00142235 /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +160,8 @@
 			isa = PBXGroup;
 			children = (
 				BFF1FBCE2812C66D00142235 /* UIFont+.swift */,
+				BFF1FBD32812FBAB00142235 /* Color+.swift */,
+				BFF1FBD72812FDAB00142235 /* UIColor+.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -364,9 +370,11 @@
 				BFF1FBD12812C6E800142235 /* NotificationManager.swift in Sources */,
 				BFF1FBB72812C4D400142235 /* TodoTableViewController.swift in Sources */,
 				BFF1FB8E2812C38300142235 /* SceneDelegate.swift in Sources */,
+				BFF1FBD82812FDAB00142235 /* UIColor+.swift in Sources */,
 				BFF1FBB92812C4DD00142235 /* PersonSettingsSwiftUIView.swift in Sources */,
 				BFF1FBAA2812C44500142235 /* MainTabBarController.swift in Sources */,
 				BFF1FBBC2812C5F300142235 /* NetworkingManager.swift in Sources */,
+				BFF1FBD42812FBAB00142235 /* Color+.swift in Sources */,
 				BFF1FB962812C38300142235 /* MagicList.xcdatamodeld in Sources */,
 				BFF1FBB32812C4C100142235 /* NotesTableViewController.swift in Sources */,
 			);
