@@ -12,6 +12,7 @@ enum FontWeight: String {
 }
 
 extension UIFont {
+    
     /// Using custom font altone in code
     /// ```
     /// .altone(18, .bold)

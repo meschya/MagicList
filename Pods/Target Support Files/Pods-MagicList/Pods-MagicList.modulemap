@@ -1,0 +1,6 @@
+framework module Pods_MagicList {
+  umbrella header "Pods-MagicList-umbrella.h"
+
+  export *
+  module * { export * }
+}
