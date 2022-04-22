@@ -2,6 +2,16 @@ import UIKit
 
 class TodoTableViewController: UITableViewController {
 
+    //MARK: - Private
+    private var toDos: [ToDo] = []
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        NetworkingManager.instance.getData(completion: (([ToDo] -> Void))) { ToDo in
+            self.toDos.append(ToDo)
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6B6E7E39281326700044661E /* UserStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B6E7E38281326700044661E /* UserStruct.swift */; };
 		BFF1FB8C2812C38300142235 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF1FB8B2812C38300142235 /* AppDelegate.swift */; };
 		BFF1FB8E2812C38300142235 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF1FB8D2812C38300142235 /* SceneDelegate.swift */; };
 		BFF1FB962812C38300142235 /* MagicList.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BFF1FB942812C38300142235 /* MagicList.xcdatamodeld */; };
@@ -35,6 +36,7 @@
 /* Begin PBXFileReference section */
 		038E13176E3F720562E1850E /* Pods-MagicList.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MagicList.debug.xcconfig"; path = "Target Support Files/Pods-MagicList/Pods-MagicList.debug.xcconfig"; sourceTree = "<group>"; };
 		3B5EE07FB4DA967B9298A2C6 /* Pods-MagicList.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MagicList.release.xcconfig"; path = "Target Support Files/Pods-MagicList/Pods-MagicList.release.xcconfig"; sourceTree = "<group>"; };
+		6B6E7E38281326700044661E /* UserStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStruct.swift; sourceTree = "<group>"; };
 		90DFE6F1A2A1A56B0E8DB31F /* Pods_MagicList.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MagicList.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFF1FB882812C38300142235 /* MagicList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MagicList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFF1FB8B2812C38300142235 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -237,6 +239,7 @@
 		BFF1FBBA2812C4E000142235 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
+				6B6E7E38281326700044661E /* UserStruct.swift */,
 				BFF1FBBB2812C5F300142235 /* NetworkingManager.swift */,
 				BFF1FBD02812C6E800142235 /* NotificationManager.swift */,
 			);
@@ -366,6 +369,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BFF1FB8C2812C38300142235 /* AppDelegate.swift in Sources */,
+				6B6E7E39281326700044661E /* UserStruct.swift in Sources */,
 				BFF1FBCF2812C66D00142235 /* UIFont+.swift in Sources */,
 				BFF1FBD12812C6E800142235 /* NotificationManager.swift in Sources */,
 				BFF1FBB72812C4D400142235 /* TodoTableViewController.swift in Sources */,
