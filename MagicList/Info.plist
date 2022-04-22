@@ -2,6 +2,17 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Altone-Bold.ttf</string>
+		<string>Altone-ExtraBold.ttf</string>
+		<string>Altone-ExtraLight.ttf</string>
+		<string>Altone-Light.ttf</string>
+		<string>Altone-Medium.ttf</string>
+		<string>Altone-Regular.ttf</string>
+		<string>Altone-SemiBold.ttf</string>
+		<string>Altone-Thin.ttf</string>
+	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
@@ -15,8 +26,6 @@
 					<string>Default Configuration</string>
 					<key>UISceneDelegateClassName</key>
 					<string>$(PRODUCT_MODULE_NAME).SceneDelegate</string>
-					<key>UISceneStoryboardFile</key>
-					<string>Main</string>
 				</dict>
 			</array>
 		</dict>

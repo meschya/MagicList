@@ -9,23 +9,53 @@
 /* Begin PBXBuildFile section */
 		BFF1FB8C2812C38300142235 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF1FB8B2812C38300142235 /* AppDelegate.swift */; };
 		BFF1FB8E2812C38300142235 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF1FB8D2812C38300142235 /* SceneDelegate.swift */; };
-		BFF1FB902812C38300142235 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF1FB8F2812C38300142235 /* ViewController.swift */; };
-		BFF1FB932812C38300142235 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFF1FB912812C38300142235 /* Main.storyboard */; };
 		BFF1FB962812C38300142235 /* MagicList.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BFF1FB942812C38300142235 /* MagicList.xcdatamodeld */; };
 		BFF1FB982812C38300142235 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFF1FB972812C38300142235 /* Assets.xcassets */; };
 		BFF1FB9B2812C38300142235 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFF1FB992812C38300142235 /* LaunchScreen.storyboard */; };
+		BFF1FBAA2812C44500142235 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF1FBA92812C44500142235 /* MainTabBarController.swift */; };
+		BFF1FBB32812C4C100142235 /* NotesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF1FBB22812C4C100142235 /* NotesTableViewController.swift */; };
+		BFF1FBB72812C4D400142235 /* TodoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF1FBB62812C4D400142235 /* TodoTableViewController.swift */; };
+		BFF1FBB92812C4DD00142235 /* PersonSettingsSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF1FBB82812C4DD00142235 /* PersonSettingsSwiftUIView.swift */; };
+		BFF1FBBC2812C5F300142235 /* NetworkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF1FBBB2812C5F300142235 /* NetworkingManager.swift */; };
+		BFF1FBC62812C66100142235 /* Altone-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BFF1FBBE2812C66100142235 /* Altone-Thin.ttf */; };
+		BFF1FBC72812C66100142235 /* Altone-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BFF1FBBF2812C66100142235 /* Altone-Medium.ttf */; };
+		BFF1FBC82812C66100142235 /* Altone-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BFF1FBC02812C66100142235 /* Altone-Light.ttf */; };
+		BFF1FBC92812C66100142235 /* Altone-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BFF1FBC12812C66100142235 /* Altone-SemiBold.ttf */; };
+		BFF1FBCA2812C66100142235 /* Altone-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BFF1FBC22812C66100142235 /* Altone-ExtraLight.ttf */; };
+		BFF1FBCB2812C66100142235 /* Altone-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BFF1FBC32812C66100142235 /* Altone-Bold.ttf */; };
+		BFF1FBCC2812C66100142235 /* Altone-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BFF1FBC42812C66100142235 /* Altone-Regular.ttf */; };
+		BFF1FBCD2812C66100142235 /* Altone-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BFF1FBC52812C66100142235 /* Altone-ExtraBold.ttf */; };
+		BFF1FBCF2812C66D00142235 /* UIFont+.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF1FBCE2812C66D00142235 /* UIFont+.swift */; };
+		BFF1FBD12812C6E800142235 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF1FBD02812C6E800142235 /* NotificationManager.swift */; };
+		CB5C7B7F110E56E492657A9B /* Pods_MagicList.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90DFE6F1A2A1A56B0E8DB31F /* Pods_MagicList.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		038E13176E3F720562E1850E /* Pods-MagicList.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MagicList.debug.xcconfig"; path = "Target Support Files/Pods-MagicList/Pods-MagicList.debug.xcconfig"; sourceTree = "<group>"; };
+		3B5EE07FB4DA967B9298A2C6 /* Pods-MagicList.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MagicList.release.xcconfig"; path = "Target Support Files/Pods-MagicList/Pods-MagicList.release.xcconfig"; sourceTree = "<group>"; };
+		90DFE6F1A2A1A56B0E8DB31F /* Pods_MagicList.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MagicList.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFF1FB882812C38300142235 /* MagicList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MagicList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFF1FB8B2812C38300142235 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BFF1FB8D2812C38300142235 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		BFF1FB8F2812C38300142235 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		BFF1FB922812C38300142235 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BFF1FB952812C38300142235 /* MagicList.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MagicList.xcdatamodel; sourceTree = "<group>"; };
 		BFF1FB972812C38300142235 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BFF1FB9A2812C38300142235 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BFF1FB9C2812C38300142235 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BFF1FBA92812C44500142235 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		BFF1FBB22812C4C100142235 /* NotesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesTableViewController.swift; sourceTree = "<group>"; };
+		BFF1FBB62812C4D400142235 /* TodoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoTableViewController.swift; sourceTree = "<group>"; };
+		BFF1FBB82812C4DD00142235 /* PersonSettingsSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonSettingsSwiftUIView.swift; sourceTree = "<group>"; };
+		BFF1FBBB2812C5F300142235 /* NetworkingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingManager.swift; sourceTree = "<group>"; };
+		BFF1FBBE2812C66100142235 /* Altone-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Altone-Thin.ttf"; sourceTree = "<group>"; };
+		BFF1FBBF2812C66100142235 /* Altone-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Altone-Medium.ttf"; sourceTree = "<group>"; };
+		BFF1FBC02812C66100142235 /* Altone-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Altone-Light.ttf"; sourceTree = "<group>"; };
+		BFF1FBC12812C66100142235 /* Altone-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Altone-SemiBold.ttf"; sourceTree = "<group>"; };
+		BFF1FBC22812C66100142235 /* Altone-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Altone-ExtraLight.ttf"; sourceTree = "<group>"; };
+		BFF1FBC32812C66100142235 /* Altone-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Altone-Bold.ttf"; sourceTree = "<group>"; };
+		BFF1FBC42812C66100142235 /* Altone-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Altone-Regular.ttf"; sourceTree = "<group>"; };
+		BFF1FBC52812C66100142235 /* Altone-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Altone-ExtraBold.ttf"; sourceTree = "<group>"; };
+		BFF1FBCE2812C66D00142235 /* UIFont+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+.swift"; sourceTree = "<group>"; };
+		BFF1FBD02812C6E800142235 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +63,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB5C7B7F110E56E492657A9B /* Pods_MagicList.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		33B766491ED738F1B7500412 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				90DFE6F1A2A1A56B0E8DB31F /* Pods_MagicList.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9187FB83455207B4CC88F73F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				038E13176E3F720562E1850E /* Pods-MagicList.debug.xcconfig */,
+				3B5EE07FB4DA967B9298A2C6 /* Pods-MagicList.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		BFF1FB7F2812C38300142235 = {
 			isa = PBXGroup;
 			children = (
 				BFF1FB8A2812C38300142235 /* MagicList */,
 				BFF1FB892812C38300142235 /* Products */,
+				9187FB83455207B4CC88F73F /* Pods */,
+				33B766491ED738F1B7500412 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,16 +108,133 @@
 		BFF1FB8A2812C38300142235 /* MagicList */ = {
 			isa = PBXGroup;
 			children = (
+				BFF1FBBA2812C4E000142235 /* Manager */,
+				BFF1FBA62812C40A00142235 /* Font */,
+				BFF1FBA52812C40400142235 /* Extension */,
+				BFF1FBA42812C3FF00142235 /* Model */,
+				BFF1FBA32812C3FB00142235 /* View */,
+				BFF1FBA22812C3F200142235 /* Controller */,
 				BFF1FB8B2812C38300142235 /* AppDelegate.swift */,
 				BFF1FB8D2812C38300142235 /* SceneDelegate.swift */,
-				BFF1FB8F2812C38300142235 /* ViewController.swift */,
-				BFF1FB912812C38300142235 /* Main.storyboard */,
 				BFF1FB972812C38300142235 /* Assets.xcassets */,
 				BFF1FB992812C38300142235 /* LaunchScreen.storyboard */,
 				BFF1FB9C2812C38300142235 /* Info.plist */,
 				BFF1FB942812C38300142235 /* MagicList.xcdatamodeld */,
 			);
 			path = MagicList;
+			sourceTree = "<group>";
+		};
+		BFF1FBA22812C3F200142235 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BFF1FBA72812C40E00142235 /* Tabbar */,
+				BFF1FBAD2812C48800142235 /* Notes */,
+				BFF1FBAC2812C48200142235 /* Todo */,
+				BFF1FBAB2812C47600142235 /* PersonSettings */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		BFF1FBA32812C3FB00142235 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BFF1FBB02812C4A200142235 /* NotesViews */,
+				BFF1FBAF2812C49C00142235 /* TodoViews */,
+				BFF1FBAE2812C49300142235 /* PersonSettingsViews */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BFF1FBA42812C3FF00142235 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BFF1FBA52812C40400142235 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				BFF1FBCE2812C66D00142235 /* UIFont+.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		BFF1FBA62812C40A00142235 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				BFF1FBC32812C66100142235 /* Altone-Bold.ttf */,
+				BFF1FBC52812C66100142235 /* Altone-ExtraBold.ttf */,
+				BFF1FBC22812C66100142235 /* Altone-ExtraLight.ttf */,
+				BFF1FBC02812C66100142235 /* Altone-Light.ttf */,
+				BFF1FBBF2812C66100142235 /* Altone-Medium.ttf */,
+				BFF1FBC42812C66100142235 /* Altone-Regular.ttf */,
+				BFF1FBC12812C66100142235 /* Altone-SemiBold.ttf */,
+				BFF1FBBE2812C66100142235 /* Altone-Thin.ttf */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
+		BFF1FBA72812C40E00142235 /* Tabbar */ = {
+			isa = PBXGroup;
+			children = (
+				BFF1FBA92812C44500142235 /* MainTabBarController.swift */,
+			);
+			path = Tabbar;
+			sourceTree = "<group>";
+		};
+		BFF1FBAB2812C47600142235 /* PersonSettings */ = {
+			isa = PBXGroup;
+			children = (
+				BFF1FBB82812C4DD00142235 /* PersonSettingsSwiftUIView.swift */,
+			);
+			path = PersonSettings;
+			sourceTree = "<group>";
+		};
+		BFF1FBAC2812C48200142235 /* Todo */ = {
+			isa = PBXGroup;
+			children = (
+				BFF1FBB62812C4D400142235 /* TodoTableViewController.swift */,
+			);
+			path = Todo;
+			sourceTree = "<group>";
+		};
+		BFF1FBAD2812C48800142235 /* Notes */ = {
+			isa = PBXGroup;
+			children = (
+				BFF1FBB22812C4C100142235 /* NotesTableViewController.swift */,
+			);
+			path = Notes;
+			sourceTree = "<group>";
+		};
+		BFF1FBAE2812C49300142235 /* PersonSettingsViews */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = PersonSettingsViews;
+			sourceTree = "<group>";
+		};
+		BFF1FBAF2812C49C00142235 /* TodoViews */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = TodoViews;
+			sourceTree = "<group>";
+		};
+		BFF1FBB02812C4A200142235 /* NotesViews */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = NotesViews;
+			sourceTree = "<group>";
+		};
+		BFF1FBBA2812C4E000142235 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				BFF1FBBB2812C5F300142235 /* NetworkingManager.swift */,
+				BFF1FBD02812C6E800142235 /* NotificationManager.swift */,
+			);
+			path = Manager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -77,9 +244,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BFF1FB9F2812C38300142235 /* Build configuration list for PBXNativeTarget "MagicList" */;
 			buildPhases = (
+				0073ADCE5F7470762C452EEC /* [CP] Check Pods Manifest.lock */,
 				BFF1FB842812C38300142235 /* Sources */,
 				BFF1FB852812C38300142235 /* Frameworks */,
 				BFF1FB862812C38300142235 /* Resources */,
+				A003C884549ABAAB29B2DB3D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -128,37 +297,84 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFF1FBC92812C66100142235 /* Altone-SemiBold.ttf in Resources */,
+				BFF1FBC82812C66100142235 /* Altone-Light.ttf in Resources */,
+				BFF1FBC62812C66100142235 /* Altone-Thin.ttf in Resources */,
+				BFF1FBCA2812C66100142235 /* Altone-ExtraLight.ttf in Resources */,
+				BFF1FBCB2812C66100142235 /* Altone-Bold.ttf in Resources */,
+				BFF1FBCD2812C66100142235 /* Altone-ExtraBold.ttf in Resources */,
 				BFF1FB9B2812C38300142235 /* LaunchScreen.storyboard in Resources */,
+				BFF1FBC72812C66100142235 /* Altone-Medium.ttf in Resources */,
+				BFF1FBCC2812C66100142235 /* Altone-Regular.ttf in Resources */,
 				BFF1FB982812C38300142235 /* Assets.xcassets in Resources */,
-				BFF1FB932812C38300142235 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0073ADCE5F7470762C452EEC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MagicList-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A003C884549ABAAB29B2DB3D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MagicList/Pods-MagicList-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MagicList/Pods-MagicList-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MagicList/Pods-MagicList-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		BFF1FB842812C38300142235 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BFF1FB902812C38300142235 /* ViewController.swift in Sources */,
 				BFF1FB8C2812C38300142235 /* AppDelegate.swift in Sources */,
+				BFF1FBCF2812C66D00142235 /* UIFont+.swift in Sources */,
+				BFF1FBD12812C6E800142235 /* NotificationManager.swift in Sources */,
+				BFF1FBB72812C4D400142235 /* TodoTableViewController.swift in Sources */,
 				BFF1FB8E2812C38300142235 /* SceneDelegate.swift in Sources */,
+				BFF1FBB92812C4DD00142235 /* PersonSettingsSwiftUIView.swift in Sources */,
+				BFF1FBAA2812C44500142235 /* MainTabBarController.swift in Sources */,
+				BFF1FBBC2812C5F300142235 /* NetworkingManager.swift in Sources */,
 				BFF1FB962812C38300142235 /* MagicList.xcdatamodeld in Sources */,
+				BFF1FBB32812C4C100142235 /* NotesTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		BFF1FB912812C38300142235 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				BFF1FB922812C38300142235 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		BFF1FB992812C38300142235 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -286,6 +502,7 @@
 		};
 		BFF1FBA02812C38300142235 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 038E13176E3F720562E1850E /* Pods-MagicList.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -295,7 +512,6 @@
 				INFOPLIST_FILE = MagicList/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -313,6 +529,7 @@
 		};
 		BFF1FBA12812C38300142235 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3B5EE07FB4DA967B9298A2C6 /* Pods-MagicList.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -322,7 +539,6 @@
 				INFOPLIST_FILE = MagicList/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

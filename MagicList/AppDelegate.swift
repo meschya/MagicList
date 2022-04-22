@@ -1,10 +1,3 @@
-//
-//  AppDelegate.swift
-//  MagicList
-//
-//  Created by Egor Mesheryakov on 22.04.22.
-//
-
 import UIKit
 import CoreData
 
