@@ -29,6 +29,11 @@
 		BFF1FBD12812C6E800142235 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF1FBD02812C6E800142235 /* NotificationManager.swift */; };
 		BFF1FBD42812FBAB00142235 /* Color+.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF1FBD32812FBAB00142235 /* Color+.swift */; };
 		BFF1FBD82812FDAB00142235 /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF1FBD72812FDAB00142235 /* UIColor+.swift */; };
+		BFF1FBDA2813092700142235 /* WelcomeStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF1FBD92813092700142235 /* WelcomeStackView.swift */; };
+		BFF1FBDC28130ADA00142235 /* UIStackView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF1FBDB28130ADA00142235 /* UIStackView+.swift */; };
+		BFF1FBDE2813144200142235 /* InfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF1FBDD2813144200142235 /* InfoTableViewCell.swift */; };
+		BFF1FBE128133E9600142235 /* TagCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF1FBE028133E9600142235 /* TagCollectionViewCell.swift */; };
+		BFF1FBE328134ED300142235 /* TableHeaderStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF1FBE228134ED300142235 /* TableHeaderStackView.swift */; };
 		CB5C7B7F110E56E492657A9B /* Pods_MagicList.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90DFE6F1A2A1A56B0E8DB31F /* Pods_MagicList.framework */; };
 /* End PBXBuildFile section */
 
@@ -60,6 +65,11 @@
 		BFF1FBD02812C6E800142235 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
 		BFF1FBD32812FBAB00142235 /* Color+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+.swift"; sourceTree = "<group>"; };
 		BFF1FBD72812FDAB00142235 /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
+		BFF1FBD92813092700142235 /* WelcomeStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeStackView.swift; sourceTree = "<group>"; };
+		BFF1FBDB28130ADA00142235 /* UIStackView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+.swift"; sourceTree = "<group>"; };
+		BFF1FBDD2813144200142235 /* InfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoTableViewCell.swift; sourceTree = "<group>"; };
+		BFF1FBE028133E9600142235 /* TagCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagCollectionViewCell.swift; sourceTree = "<group>"; };
+		BFF1FBE228134ED300142235 /* TableHeaderStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableHeaderStackView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +172,7 @@
 				BFF1FBCE2812C66D00142235 /* UIFont+.swift */,
 				BFF1FBD32812FBAB00142235 /* Color+.swift */,
 				BFF1FBD72812FDAB00142235 /* UIColor+.swift */,
+				BFF1FBDB28130ADA00142235 /* UIStackView+.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -230,6 +241,7 @@
 		BFF1FBB02812C4A200142235 /* NotesViews */ = {
 			isa = PBXGroup;
 			children = (
+				BFF1FBE428135A7700142235 /* HeaderSection */,
 			);
 			path = NotesViews;
 			sourceTree = "<group>";
@@ -241,6 +253,17 @@
 				BFF1FBD02812C6E800142235 /* NotificationManager.swift */,
 			);
 			path = Manager;
+			sourceTree = "<group>";
+		};
+		BFF1FBE428135A7700142235 /* HeaderSection */ = {
+			isa = PBXGroup;
+			children = (
+				BFF1FBD92813092700142235 /* WelcomeStackView.swift */,
+				BFF1FBDD2813144200142235 /* InfoTableViewCell.swift */,
+				BFF1FBE228134ED300142235 /* TableHeaderStackView.swift */,
+				BFF1FBE028133E9600142235 /* TagCollectionViewCell.swift */,
+			);
+			path = HeaderSection;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -365,17 +388,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFF1FBE328134ED300142235 /* TableHeaderStackView.swift in Sources */,
 				BFF1FB8C2812C38300142235 /* AppDelegate.swift in Sources */,
 				BFF1FBCF2812C66D00142235 /* UIFont+.swift in Sources */,
 				BFF1FBD12812C6E800142235 /* NotificationManager.swift in Sources */,
 				BFF1FBB72812C4D400142235 /* TodoTableViewController.swift in Sources */,
 				BFF1FB8E2812C38300142235 /* SceneDelegate.swift in Sources */,
 				BFF1FBD82812FDAB00142235 /* UIColor+.swift in Sources */,
+				BFF1FBDE2813144200142235 /* InfoTableViewCell.swift in Sources */,
 				BFF1FBB92812C4DD00142235 /* PersonSettingsSwiftUIView.swift in Sources */,
+				BFF1FBDC28130ADA00142235 /* UIStackView+.swift in Sources */,
+				BFF1FBE128133E9600142235 /* TagCollectionViewCell.swift in Sources */,
 				BFF1FBAA2812C44500142235 /* MainTabBarController.swift in Sources */,
 				BFF1FBBC2812C5F300142235 /* NetworkingManager.swift in Sources */,
 				BFF1FBD42812FBAB00142235 /* Color+.swift in Sources */,
 				BFF1FB962812C38300142235 /* MagicList.xcdatamodeld in Sources */,
+				BFF1FBDA2813092700142235 /* WelcomeStackView.swift in Sources */,
 				BFF1FBB32812C4C100142235 /* NotesTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

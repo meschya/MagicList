@@ -12,5 +12,5 @@ struct ColorTheme {
     let background = Color("BackgroundColor")
     let title = Color("TitleColor")
     let secondTitle = Color("SecondTitleColor")
-    let welcomeGray = Color("WelcomeColor")
+    let cellColor = Color("CellColor")
 }

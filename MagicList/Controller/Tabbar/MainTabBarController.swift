@@ -41,6 +41,6 @@ final class MainTabBarController: UITabBarController {
         notesTVC.title = "Заметки"
         todoTVC.title = "Задачи"
         personSettingsSwiftUI.title = "Настройки"
-        tabBar.tintColor = .label
+        tabBar.tintColor = .theme.accent
     }
 }
