@@ -1,25 +1,23 @@
 import UIKit
 
-final class InfoTableViewCell: UITableViewCell {
+final class NotesTableViewCell: UITableViewCell {
     // MARK: - Identifier
     
-    static let identifier = "InfoTableViewCell"
+    static let identifier = "NotesTableViewCell"
     
     // MARK: - Properties
-
-    // MARK: Public
     
-    let welcomeStackView: WelcomeStackView = .init()
-
+    private let notesStackView: NoteStackView = .init()
+    
     // MARK: - Initialization
-
+    
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         addSubviews()
         addContraints()
         addSetups()
     }
-
+    
     @available(*, unavailable)
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -30,11 +28,11 @@ final class InfoTableViewCell: UITableViewCell {
     // MARK: Private
     
     private func addContraints() {
-        welcomeStackView.translatesAutoresizingMaskIntoConstraints = false
-        welcomeStackView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 10).isActive = true
-        welcomeStackView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor).isActive = true
-        welcomeStackView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor).isActive = true
-        welcomeStackView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor).isActive = true
+        notesStackView.translatesAutoresizingMaskIntoConstraints = false
+        notesStackView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 10).isActive = true
+        notesStackView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 20).isActive = true
+        notesStackView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -20).isActive = true
+        notesStackView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -10).isActive = true
     }
     
     // MARK: - Setups
@@ -42,7 +40,7 @@ final class InfoTableViewCell: UITableViewCell {
     // MARK: Private
     
     private func addSubviews() {
-        contentView.addSubview(welcomeStackView)
+        contentView.addSubview(notesStackView)
     }
     
     private func addSetups() {

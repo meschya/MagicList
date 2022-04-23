@@ -7,9 +7,9 @@ class TodoTableViewController: UITableViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        NetworkingManager.instance.getData(completion: (([ToDo] -> Void))) { ToDo in
-            self.toDos.append(ToDo)
-        }
+//        NetworkingManager.instance.getData(completion: (([ToDo] -> Void))) { ToDo in
+//             self.toDos.append(ToDo)
+//        }
     }
     
     override func viewDidLoad() {

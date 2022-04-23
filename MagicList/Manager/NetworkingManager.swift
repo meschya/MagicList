@@ -15,9 +15,9 @@ final class NetworkingManager {
     func getData(completion: @escaping (([ToDo]) -> Void)) {
         AF.request(Constants.baseURL + EndPoints.todos).responseDecodable(of: [ToDo].self) { response in
             switch response.result {
-            case .success(let model)
+            case .success(let model):
                 completion(model)
-            case .failure(let error)
+            case .failure(let error):
                 print(error)
             }
         }

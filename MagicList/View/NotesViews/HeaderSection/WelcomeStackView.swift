@@ -1,7 +1,21 @@
 import UIKit
 
+enum Tags: String {
+    case work = "Работа"
+    case study = "Учёба"
+    case eat = "Еда"
+    case sport = "Спорт"
+    case other = "Другое"
+    
+    static let allValues = [work, study, eat, sport, other]
+}
+
 final class WelcomeStackView: UIStackView {
     // MARK: - Properties
+    
+    // MARK: Public
+    
+    let tableHeaderStackView: TableHeaderStackView = .init()
     
     // MARK: Private
     
@@ -11,7 +25,6 @@ final class WelcomeStackView: UIStackView {
     private let countNotesLabel: UILabel = .init()
     private let tagCollectionView: UICollectionView = .init(frame: CGRect.zero, collectionViewLayout: UICollectionViewFlowLayout())
     private let layout = UICollectionViewFlowLayout()
-    private let tableHeaderStackView: TableHeaderStackView = .init()
     
     // MARK: - Initialization
     
@@ -152,6 +165,8 @@ final class WelcomeStackView: UIStackView {
     // MARK: Private
     
     private func modificatorForCountNotesLabel() -> NSMutableAttributedString {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd MMMM"
         let firstAttributes: [NSAttributedString.Key: Any] = [
             NSAttributedString.Key.foregroundColor: UIColor.theme.title!,
             NSAttributedString.Key.font: UIFont.altone(28, .bold)
@@ -163,7 +178,7 @@ final class WelcomeStackView: UIStackView {
         
         let firstString = NSMutableAttributedString(string: "У Вас ", attributes: firstAttributes)
         let secondString = NSAttributedString(string: "53 заметки ", attributes: secondAttributes)
-        let thirdString = NSAttributedString(string: "на 22 апреля 📌", attributes: firstAttributes)
+        let thirdString = NSAttributedString(string: "на \(dateFormatter.string(from: Date.now)) 📌", attributes: firstAttributes)
         firstString.append(secondString)
         firstString.append(thirdString)
         return firstString
@@ -172,11 +187,12 @@ final class WelcomeStackView: UIStackView {
 
 extension WelcomeStackView: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        return Tags.allValues.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if let cell = tagCollectionView.dequeueReusableCell(withReuseIdentifier: TagCollectionViewCell.identifier, for: indexPath) as? TagCollectionViewCell {
+            cell.set(Tags.allValues[indexPath.item].rawValue)
             return cell
         }
         return UICollectionViewCell()

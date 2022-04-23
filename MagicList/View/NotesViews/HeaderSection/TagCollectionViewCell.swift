@@ -35,6 +35,12 @@ final class TagCollectionViewCell: UICollectionViewCell {
         tagButton.heightAnchor.constraint(equalToConstant: 30).isActive = true
     }
     
+    // MARK: - API
+    
+    func set(_ text: String) {
+        tagButton.setTitle(text, for: .normal)
+    }
+    
     // MARK: - Setups
     
     // MARK: Private

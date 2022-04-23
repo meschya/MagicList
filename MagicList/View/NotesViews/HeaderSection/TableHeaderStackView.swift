@@ -3,6 +3,10 @@ import UIKit
 final class TableHeaderStackView: UIStackView {
     // MARK: - Properties
     
+    // MARK: Public
+    
+    weak var delegate: TransferActionsBetweenVCDelegate?
+    
     // MARK: Private
     
     private let dateLabel: UILabel = .init()
@@ -78,8 +82,20 @@ final class TableHeaderStackView: UIStackView {
     }
     
     private func addImageSetups() {
+        let tap = UITapGestureRecognizer(target: self, action: #selector(addNoteClick))
+        addImageView.isUserInteractionEnabled = true
         addImageView.image = UIImage(systemName: "plus.circle")
         addImageView.contentMode = .scaleAspectFill
         addImageView.tintColor = .theme.secondTitle
+        addImageView.addGestureRecognizer(tap)
+    }
+    
+    // MARK: - Actions
+    
+    // MARK: Private
+    
+    @objc private func addNoteClick() {
+        let noteVC = NoteViewController()
+        delegate?.viewScreen(noteVC)
     }
 }
