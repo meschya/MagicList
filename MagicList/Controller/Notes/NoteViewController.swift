@@ -13,10 +13,7 @@ enum Tag: String {
 final class NoteViewController: UIViewController {
     
     // MARK: - Properties
-    // MARK: Publick
-    weak var delegate: TransferInfoBetweenVCDelegate?
     // MARK: Private
-    private var noteInfo: NoteInfo = NoteInfo()
     private var noteStackView: UIStackView = UIStackView()
     private var headerStackView: UIStackView = UIStackView()
     private var headerTextField: UITextField = UITextField()
@@ -65,10 +62,6 @@ final class NoteViewController: UIViewController {
             noteTextView.text != ""
         )
         if checkAllInformation == true {
-            noteInfo.title = headerTextField.text!
-            //noteInfo.tag = 
-            noteInfo.notesText = noteTextView.text!
-            delegate?.transferInfo(noteInfo)
             navigationController?.popViewController(animated: true)
         } else {
             showAllert("Fill in all fields")

@@ -11,9 +11,6 @@ final class NotesTableViewController: UITableViewController {
     // MARK: - Setups
     
     // MARK: Private
-    
-    private var notesInfo: [NoteInfo] = []
-    
     private func addSetups() {
         tableView.backgroundColor = .theme.background
         tableView.separatorStyle = .none
@@ -42,7 +39,7 @@ final class NotesTableViewController: UITableViewController {
         } else if section == 1 {
             return 1
         }
-        return notesInfo.count
+        return 2
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -62,11 +59,7 @@ final class NotesTableViewController: UITableViewController {
     }
 }
 
-extension NotesTableViewController: TransferActionsBetweenVCDelegate, TransferInfoBetweenVCDelegate {
-    func transferInfo(_ note: NoteInfo) {
-        notesInfo.append(note)
-        tableView.reloadData()
-    }
+extension NotesTableViewController: TransferActionsBetweenVCDelegate {
     
     func viewScreen(_ note: NoteViewController) {
         navigationController?.pushViewController(note, animated: true)
