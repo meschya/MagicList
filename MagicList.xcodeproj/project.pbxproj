@@ -41,6 +41,7 @@
 		BFF1FBF0281417FD00142235 /* NoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF1FBEF281417FD00142235 /* NoteViewController.swift */; };
 		BFF1FBF32814183B00142235 /* Transfers.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF1FBF22814183B00142235 /* Transfers.swift */; };
 		CB5C7B7F110E56E492657A9B /* Pods_MagicList.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90DFE6F1A2A1A56B0E8DB31F /* Pods_MagicList.framework */; };
+		F99356122814F5B7003F2832 /* TransferNoteInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99356112814F5B7003F2832 /* TransferNoteInfo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -82,6 +83,7 @@
 		BFF1FBED2814163500142235 /* NotesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesTableViewController.swift; sourceTree = "<group>"; };
 		BFF1FBEF281417FD00142235 /* NoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteViewController.swift; sourceTree = "<group>"; };
 		BFF1FBF22814183B00142235 /* Transfers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transfers.swift; sourceTree = "<group>"; };
+		F99356112814F5B7003F2832 /* TransferNoteInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferNoteInfo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -296,6 +298,7 @@
 			isa = PBXGroup;
 			children = (
 				BFF1FBF22814183B00142235 /* Transfers.swift */,
+				F99356112814F5B7003F2832 /* TransferNoteInfo.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -422,6 +425,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F99356122814F5B7003F2832 /* TransferNoteInfo.swift in Sources */,
 				BFF1FBF32814183B00142235 /* Transfers.swift in Sources */,
 				BFF1FBE328134ED300142235 /* TableHeaderStackView.swift in Sources */,
 				BFF1FB8C2812C38300142235 /* AppDelegate.swift in Sources */,
@@ -584,7 +588,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 2ZC3NNH886;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MagicList/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -613,7 +617,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 2ZC3NNH886;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MagicList/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
