@@ -1,15 +1,5 @@
 import UIKit
 
-enum Tag: String {
-    case work = "Работа"
-    case study = "Учёба"
-    case eat = "Еда"
-    case sport = "Спорт"
-    case other = "Другое"
-    
-    static let allValues = [work, study, eat, sport, other]
-}
-
 final class NoteViewController: UIViewController {
     
     // MARK: - Properties
@@ -47,7 +37,6 @@ final class NoteViewController: UIViewController {
             headerStackView,
             noteTextView
         )
-        
     }
     
     private func configNavigationBar() {
@@ -157,21 +146,24 @@ final class NoteViewController: UIViewController {
         headerStackView.trailingAnchor.constraint(equalTo: noteStackView.trailingAnchor).isActive = true
         headerStackView.heightAnchor.constraint(equalTo: noteStackView.heightAnchor, multiplier: 0.2).isActive = true
     }
+    
     private func headerTextFieldConstraints() {
         headerTextField.translatesAutoresizingMaskIntoConstraints = false
     }
+    
     private func tagCollectionViewConstraints() {
         tagCollectionView.translatesAutoresizingMaskIntoConstraints = false
         tagCollectionView.heightAnchor.constraint(equalToConstant: 60).isActive = true
     }
+    
     private func noteTextViewConstraints() {
         noteTextView.translatesAutoresizingMaskIntoConstraints = false
     }
+    
     // MARK: - Helpers
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         view.endEditing(true)
     }
-    
 }
 
 // MARK: - Helpers
@@ -184,12 +176,12 @@ extension NoteViewController: UITextFieldDelegate {
 
 extension NoteViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return Tag.allValues.count
+        return Tags.allValues.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if let cell = tagCollectionView.dequeueReusableCell(withReuseIdentifier: TagCollectionViewCell.identifier, for: indexPath) as? TagCollectionViewCell {
-            cell.set(Tag.allValues[indexPath.item].rawValue)
+            cell.set(Tags.allValues[indexPath.item].rawValue)
             return cell
         }
         return UICollectionViewCell()
