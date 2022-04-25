@@ -1,30 +1,35 @@
 import UIKit
 
 final class NoteViewController: UIViewController {
-    
     // MARK: - Properties
+
     // MARK: Private
-    private var noteStackView: UIStackView = UIStackView()
-    private var headerStackView: UIStackView = UIStackView()
-    private var headerTextField: UITextField = UITextField()
+
+    private var noteStackView: UIStackView = .init()
+    private var headerStackView: UIStackView = .init()
+    private var headerTextField: UITextField = .init()
     private var tagCollectionView: UICollectionView = .init(frame: CGRect.zero, collectionViewLayout: UICollectionViewFlowLayout())
-    private var noteTextView: UITextView = UITextView()
+    private var noteTextView: UITextView = .init()
     private let layout = UICollectionViewFlowLayout()
     
     // MARK: - Lifecycle
+
     override func viewDidLoad() {
         super.viewDidLoad()
         addSubviews()
         addSetups()
         addConstraints()
     }
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         configNavigationBar()
     }
     
     // MARK: - API
+
     // MARK: - Setups
+
     private func addSubviews() {
         view.addSubview(noteStackView)
         
@@ -44,7 +49,7 @@ final class NoteViewController: UIViewController {
             barButtonSystemItem: .save, target: self,
             action: #selector(saveButtonTapped)
         )
-        }
+    }
     
     @objc private func saveButtonTapped() {
         let checkAllInformation = (headerTextField.text != "" &&
@@ -53,7 +58,7 @@ final class NoteViewController: UIViewController {
         if checkAllInformation == true {
             navigationController?.popViewController(animated: true)
         } else {
-            showAllert("Fill in all fields")
+            showAllert("Заполните все поля")
         }
     }
     
@@ -107,6 +112,7 @@ final class NoteViewController: UIViewController {
         tagCollectionView.dataSource = self
         tagCollectionView.register(TagCollectionViewCell.self, forCellWithReuseIdentifier: TagCollectionViewCell.identifier)
     }
+
     private func tagCollectionViewSetupUI() {
         tagCollectionView.backgroundColor = .theme.background
         tagCollectionView.collectionViewLayout = layout
@@ -131,6 +137,7 @@ final class NoteViewController: UIViewController {
         tagCollectionViewConstraints()
         noteTextViewConstraints()
     }
+
     private func noteStackViewConstraints() {
         noteStackView.translatesAutoresizingMaskIntoConstraints = false
         noteStackView.topAnchor.constraint(equalTo: view.topAnchor, constant: 100).isActive = true
@@ -161,6 +168,7 @@ final class NoteViewController: UIViewController {
     }
     
     // MARK: - Helpers
+
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         view.endEditing(true)
     }
