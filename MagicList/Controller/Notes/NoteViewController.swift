@@ -5,6 +5,7 @@ final class NoteViewController: UIViewController {
 
     // MARK: Private
 
+    private let scrollView: UIScrollView = .init()
     private var noteStackView: UIStackView = .init()
     private var headerStackView: UIStackView = .init()
     private var headerTextField: UITextField = .init()
@@ -27,11 +28,67 @@ final class NoteViewController: UIViewController {
     }
     
     // MARK: - API
+    
+    // MARK: - Constraints
+    
+    // MARK: Private
+    
+    private func addConstraints() {
+        addScrollViewConstraint()
+        noteStackViewConstraints()
+        headerStackViewConstraints()
+        headerTextFieldConstraints()
+        tagCollectionViewConstraints()
+        noteTextViewConstraints()
+    }
+    
+    private func addScrollViewConstraint() {
+        scrollView.translatesAutoresizingMaskIntoConstraints = false
+        scrollView.topAnchor.constraint(equalTo: view.topAnchor, constant: 10).isActive = true
+        scrollView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10).isActive = true
+        scrollView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10).isActive = true
+        scrollView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -10).isActive = true
+    }
+    
+    private func noteStackViewConstraints() {
+        noteStackView.translatesAutoresizingMaskIntoConstraints = false
+        noteStackView.topAnchor.constraint(equalTo: scrollView.topAnchor).isActive = true
+        noteStackView.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor).isActive = true
+        noteStackView.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor).isActive = true
+        noteStackView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor).isActive = true
+        noteStackView.widthAnchor.constraint(equalTo: scrollView.widthAnchor, multiplier: 1).isActive = true
+        noteStackView.heightAnchor.constraint(equalToConstant: 730).isActive = true
+    }
+    
+    private func headerStackViewConstraints() {
+        headerStackView.translatesAutoresizingMaskIntoConstraints = false
+        headerStackView.topAnchor.constraint(equalTo: noteStackView.topAnchor).isActive = true
+        headerStackView.leadingAnchor.constraint(equalTo: noteStackView.leadingAnchor).isActive = true
+        headerStackView.trailingAnchor.constraint(equalTo: noteStackView.trailingAnchor).isActive = true
+        headerStackView.heightAnchor.constraint(equalTo: noteStackView.heightAnchor, multiplier: 0.2).isActive = true
+    }
+    
+    private func headerTextFieldConstraints() {
+        headerTextField.translatesAutoresizingMaskIntoConstraints = false
+    }
+    
+    private func tagCollectionViewConstraints() {
+        tagCollectionView.translatesAutoresizingMaskIntoConstraints = false
+        tagCollectionView.heightAnchor.constraint(equalToConstant: 60).isActive = true
+    }
+    
+    private func noteTextViewConstraints() {
+        noteTextView.translatesAutoresizingMaskIntoConstraints = false
+    }
+    
 
     // MARK: - Setups
+    
+    // MARK: Private
 
     private func addSubviews() {
-        view.addSubview(noteStackView)
+        view.addSubview(scrollView)
+        scrollView.addSubview(noteStackView)
         
         headerStackView.addArrangedSubviews(
             headerTextField,
@@ -70,6 +127,7 @@ final class NoteViewController: UIViewController {
     
     private func addSetups() {
         view.backgroundColor = .theme.background
+        scrollView.showsVerticalScrollIndicator = false
         noteStackViewSetup()
         headerStackViewSetup()
         headerTextFieldSetup()
@@ -128,43 +186,6 @@ final class NoteViewController: UIViewController {
         noteTextView.font = .altone(20, .regular)
         noteTextView.layer.cornerRadius = 10
         noteTextView.keyboardType = .default
-    }
-    
-    private func addConstraints() {
-        noteStackViewConstraints()
-        headerStackViewConstraints()
-        headerTextFieldConstraints()
-        tagCollectionViewConstraints()
-        noteTextViewConstraints()
-    }
-
-    private func noteStackViewConstraints() {
-        noteStackView.translatesAutoresizingMaskIntoConstraints = false
-        noteStackView.topAnchor.constraint(equalTo: view.topAnchor, constant: 100).isActive = true
-        noteStackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20).isActive = true
-        noteStackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20).isActive = true
-        noteStackView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -85).isActive = true
-    }
-    
-    private func headerStackViewConstraints() {
-        headerStackView.translatesAutoresizingMaskIntoConstraints = false
-        headerStackView.topAnchor.constraint(equalTo: noteStackView.topAnchor).isActive = true
-        headerStackView.leadingAnchor.constraint(equalTo: noteStackView.leadingAnchor).isActive = true
-        headerStackView.trailingAnchor.constraint(equalTo: noteStackView.trailingAnchor).isActive = true
-        headerStackView.heightAnchor.constraint(equalTo: noteStackView.heightAnchor, multiplier: 0.2).isActive = true
-    }
-    
-    private func headerTextFieldConstraints() {
-        headerTextField.translatesAutoresizingMaskIntoConstraints = false
-    }
-    
-    private func tagCollectionViewConstraints() {
-        tagCollectionView.translatesAutoresizingMaskIntoConstraints = false
-        tagCollectionView.heightAnchor.constraint(equalToConstant: 60).isActive = true
-    }
-    
-    private func noteTextViewConstraints() {
-        noteTextView.translatesAutoresizingMaskIntoConstraints = false
     }
     
     // MARK: - Helpers
