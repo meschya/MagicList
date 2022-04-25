@@ -27,6 +27,14 @@ final class NoteView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
+    // MARK: - API
+    
+    func setInfo(_ title: String, _ desc: String, _ tag: String) {
+        titleLabel.text = title
+        descriptionLabel.text = desc
+        tagButton.setTitle(tag, for: .normal)
+    }
+    
     // MARK: - Constraints
     
     // MARK: Private

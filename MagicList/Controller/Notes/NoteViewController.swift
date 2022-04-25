@@ -5,11 +5,13 @@ final class NoteViewController: UIViewController {
 
     // MARK: Private
 
+    private var note: Note = .init()
     private let scrollView: UIScrollView = .init()
     private var noteStackView: UIStackView = .init()
     private var headerStackView: UIStackView = .init()
     private var headerTextField: UITextField = .init()
     private var tagCollectionView: UICollectionView = .init(frame: CGRect.zero, collectionViewLayout: UICollectionViewFlowLayout())
+    private var tagNote: String?
     private var noteTextView: UITextView = .init()
     private let layout = UICollectionViewFlowLayout()
     
@@ -81,7 +83,6 @@ final class NoteViewController: UIViewController {
         noteTextView.translatesAutoresizingMaskIntoConstraints = false
     }
     
-
     // MARK: - Setups
     
     // MARK: Private
@@ -109,10 +110,17 @@ final class NoteViewController: UIViewController {
     }
     
     @objc private func saveButtonTapped() {
-        let checkAllInformation = (headerTextField.text != "" &&
-            noteTextView.text != ""
+        let checkAllInformation = (headerTextField.text != ""
+                                   && noteTextView.text != ""
+                                   && tagNote != nil
         )
         if checkAllInformation == true {
+            CoreDataManager.instance.saveNote(note,
+                                              headerTextField.text ?? "",
+                                              noteTextView.text ?? "",
+                                              tagNote ?? "Еда",
+                                              Date.now,
+                                              Date.now)
             navigationController?.popViewController(animated: true)
         } else {
             showAllert("Заполните все поля")
@@ -214,5 +222,9 @@ extension NoteViewController: UICollectionViewDelegate, UICollectionViewDataSour
             return cell
         }
         return UICollectionViewCell()
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        tagNote = Tags.allValues[indexPath.row].rawValue
     }
 }

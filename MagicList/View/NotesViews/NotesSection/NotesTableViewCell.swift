@@ -7,7 +7,7 @@ final class NotesTableViewCell: UITableViewCell {
     
     // MARK: - Properties
     
-    private let notesStackView: NoteStackView = .init()
+    let notesStackView: NoteStackView = .init()
     
     // MARK: - Initialization
     
