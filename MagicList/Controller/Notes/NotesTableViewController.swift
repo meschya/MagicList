@@ -11,7 +11,6 @@ final class NotesTableViewController: UITableViewController {
     // MARK: - Setups
     
     // MARK: Private
-    
     private func addSetups() {
         tableView.backgroundColor = .theme.background
         tableView.separatorStyle = .none
