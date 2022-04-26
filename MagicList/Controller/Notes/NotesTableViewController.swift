@@ -7,7 +7,7 @@ final class NotesTableViewController: UITableViewController, NSFetchedResultsCon
     // MARK: Private
 
     private var fetchResultController: NSFetchedResultsController<Note>!
-    private let headerView = WelcomeStackView()
+    private var headerView = WelcomeStackView()
     private var notes: [Note] = [] {
         didSet {
             self.tableView.reloadData()
@@ -20,6 +20,7 @@ final class NotesTableViewController: UITableViewController, NSFetchedResultsCon
         super.viewDidLoad()
         addSetups()
         coreDataSetups()
+        addHeaderView()
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -76,9 +77,9 @@ final class NotesTableViewController: UITableViewController, NSFetchedResultsCon
     // MARK: Private
     
     private func addHeaderView() {
-        let headerView = WelcomeStackView(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: 240))
-        headerView.setCount(notes.count)
+        headerView = WelcomeStackView(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: 240))
         headerView.tableHeaderStackView.delegate = self
+        headerView.setCount(notes.count)
         tableView.tableHeaderView = headerView
     }
 
@@ -94,7 +95,7 @@ final class NotesTableViewController: UITableViewController, NSFetchedResultsCon
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: NotesTableViewCell.identifier) as? NotesTableViewCell {
-            addHeaderView()
+            headerView.setCount(notes.count)
             let note = notes[indexPath.row]
             cell.notesStackView.setInfo(note.titleNote ?? "",
                                         note.descriptionNote ?? "",
