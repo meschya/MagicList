@@ -2,7 +2,9 @@ import UIKit
 
 final class NoteViewController: UIViewController {
     // MARK: - Properties
-
+    // MARK: Public
+    public var editNote: Note = .init()
+    
     // MARK: Private
 
     private var note: Note = .init()
@@ -10,8 +12,8 @@ final class NoteViewController: UIViewController {
     private var noteStackView: UIStackView = .init()
     private var headerStackView: UIStackView = .init()
     private var headerTextField: UITextField = .init()
-    private var tagCollectionView: UICollectionView = .init(frame: CGRect.zero, collectionViewLayout: UICollectionViewFlowLayout())
     private var tagNote: String?
+    private var tagCollectionView: UICollectionView = .init(frame: CGRect.zero, collectionViewLayout: UICollectionViewFlowLayout())
     private var noteTextView: UITextView = .init()
     private let layout = UICollectionViewFlowLayout()
     
@@ -22,11 +24,13 @@ final class NoteViewController: UIViewController {
         addSubviews()
         addSetups()
         addConstraints()
+        
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         configNavigationBar()
+        addEditNote()
     }
     
     // MARK: - API
@@ -164,7 +168,7 @@ final class NoteViewController: UIViewController {
         headerTextField.delegate = self
         headerTextField.leftViewMode = .always
         headerTextField.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 5, height: headerTextField.bounds.height))
-        headerTextField.placeholder = "Enter title"
+        headerTextField.placeholder = "Введите заголовок"
         headerTextField.textColor = .theme.accent
         headerTextField.font = .altone(28, .bold)
         headerTextField.backgroundColor = .theme.cellColor
@@ -201,6 +205,12 @@ final class NoteViewController: UIViewController {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         view.endEditing(true)
     }
+    
+    private func addEditNote() {
+        headerTextField.text = editNote.titleNote!
+        tagNote = editNote.tagNote!
+        noteTextView.text = editNote.descriptionNote!
+    }
 }
 
 // MARK: - Helpers
@@ -228,3 +238,4 @@ extension NoteViewController: UICollectionViewDelegate, UICollectionViewDataSour
         tagNote = Tags.allValues[indexPath.row].rawValue
     }
 }
+
