@@ -114,6 +114,7 @@ final class NotesTableViewController: UITableViewController, NSFetchedResultsCon
         viewScreen(noteScreenViewController)
     }
 
+    
     // MARK: Fetch request methods
 
     func controllerWillChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
