@@ -41,6 +41,8 @@
 		BFF1FBF0281417FD00142235 /* NoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF1FBEF281417FD00142235 /* NoteViewController.swift */; };
 		BFF1FBF32814183B00142235 /* Transfers.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF1FBF22814183B00142235 /* Transfers.swift */; };
 		CB5C7B7F110E56E492657A9B /* Pods_MagicList.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90DFE6F1A2A1A56B0E8DB31F /* Pods_MagicList.framework */; };
+		DD6E933E28169384003492D1 /* PersonInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6E933D28169384003492D1 /* PersonInformation.swift */; };
+		DD6E935928173DAB003492D1 /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6E935828173DAB003492D1 /* UserSettings.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -82,6 +84,8 @@
 		BFF1FBED2814163500142235 /* NotesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesTableViewController.swift; sourceTree = "<group>"; };
 		BFF1FBEF281417FD00142235 /* NoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteViewController.swift; sourceTree = "<group>"; };
 		BFF1FBF22814183B00142235 /* Transfers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transfers.swift; sourceTree = "<group>"; };
+		DD6E933D28169384003492D1 /* PersonInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonInformation.swift; sourceTree = "<group>"; };
+		DD6E935828173DAB003492D1 /* UserSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettings.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -217,6 +221,7 @@
 			isa = PBXGroup;
 			children = (
 				BFF1FBB82812C4DD00142235 /* PersonSettingsSwiftUIView.swift */,
+				DD6E933D28169384003492D1 /* PersonInformation.swift */,
 			);
 			path = PersonSettings;
 			sourceTree = "<group>";
@@ -267,6 +272,7 @@
 				6B6E7E38281326700044661E /* UserStruct.swift */,
 				BFF1FBBB2812C5F300142235 /* NetworkingManager.swift */,
 				BFF1FBD02812C6E800142235 /* NotificationManager.swift */,
+				DD6E935828173DAB003492D1 /* UserSettings.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -438,6 +444,7 @@
 				BFF1FBDE2813144200142235 /* InfoTableViewCell.swift in Sources */,
 				BFF1FBB92812C4DD00142235 /* PersonSettingsSwiftUIView.swift in Sources */,
 				BFF1FBDC28130ADA00142235 /* UIStackView+.swift in Sources */,
+				DD6E935928173DAB003492D1 /* UserSettings.swift in Sources */,
 				BFF1FBE128133E9600142235 /* TagCollectionViewCell.swift in Sources */,
 				BFF1FBAA2812C44500142235 /* MainTabBarController.swift in Sources */,
 				BFF1FBBC2812C5F300142235 /* NetworkingManager.swift in Sources */,
@@ -445,6 +452,7 @@
 				BFF1FB962812C38300142235 /* MagicList.xcdatamodeld in Sources */,
 				BFF1FBDA2813092700142235 /* WelcomeStackView.swift in Sources */,
 				BFF1FBEE2814163500142235 /* NotesTableViewController.swift in Sources */,
+				DD6E933E28169384003492D1 /* PersonInformation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
