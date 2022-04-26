@@ -31,7 +31,6 @@
 		BFF1FBD82812FDAB00142235 /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF1FBD72812FDAB00142235 /* UIColor+.swift */; };
 		BFF1FBDA2813092700142235 /* WelcomeStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF1FBD92813092700142235 /* WelcomeStackView.swift */; };
 		BFF1FBDC28130ADA00142235 /* UIStackView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF1FBDB28130ADA00142235 /* UIStackView+.swift */; };
-		BFF1FBDE2813144200142235 /* InfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF1FBDD2813144200142235 /* InfoTableViewCell.swift */; };
 		BFF1FBE128133E9600142235 /* TagCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF1FBE028133E9600142235 /* TagCollectionViewCell.swift */; };
 		BFF1FBE328134ED300142235 /* TableHeaderStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF1FBE228134ED300142235 /* TableHeaderStackView.swift */; };
 		BFF1FBE72813651700142235 /* NoteStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF1FBE62813651700142235 /* NoteStackView.swift */; };
@@ -74,7 +73,6 @@
 		BFF1FBD72812FDAB00142235 /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
 		BFF1FBD92813092700142235 /* WelcomeStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeStackView.swift; sourceTree = "<group>"; };
 		BFF1FBDB28130ADA00142235 /* UIStackView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+.swift"; sourceTree = "<group>"; };
-		BFF1FBDD2813144200142235 /* InfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoTableViewCell.swift; sourceTree = "<group>"; };
 		BFF1FBE028133E9600142235 /* TagCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagCollectionViewCell.swift; sourceTree = "<group>"; };
 		BFF1FBE228134ED300142235 /* TableHeaderStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableHeaderStackView.swift; sourceTree = "<group>"; };
 		BFF1FBE62813651700142235 /* NoteStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteStackView.swift; sourceTree = "<group>"; };
@@ -115,6 +113,13 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		BF55A6AE28187249009ED4FD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		BFF1FB7F2812C38300142235 = {
 			isa = PBXGroup;
 			children = (
@@ -139,8 +144,8 @@
 				BFF1FBF12814182500142235 /* Protocol */,
 				BFF1FBBA2812C4E000142235 /* Manager */,
 				BFF1FBA62812C40A00142235 /* Font */,
+				BF55A6AE28187249009ED4FD /* Model */,
 				BFF1FBA52812C40400142235 /* Extension */,
-				BFF1FBA42812C3FF00142235 /* Model */,
 				BFF1FBA32812C3FB00142235 /* View */,
 				BFF1FBA22812C3F200142235 /* Controller */,
 				BFF1FB8B2812C38300142235 /* AppDelegate.swift */,
@@ -168,17 +173,8 @@
 			isa = PBXGroup;
 			children = (
 				BFF1FBB02812C4A200142235 /* NotesViews */,
-				BFF1FBAF2812C49C00142235 /* TodoViews */,
-				BFF1FBAE2812C49300142235 /* PersonSettingsViews */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		BFF1FBA42812C3FF00142235 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		BFF1FBA52812C40400142235 /* Extension */ = {
@@ -240,20 +236,6 @@
 			path = Notes;
 			sourceTree = "<group>";
 		};
-		BFF1FBAE2812C49300142235 /* PersonSettingsViews */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = PersonSettingsViews;
-			sourceTree = "<group>";
-		};
-		BFF1FBAF2812C49C00142235 /* TodoViews */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = TodoViews;
-			sourceTree = "<group>";
-		};
 		BFF1FBB02812C4A200142235 /* NotesViews */ = {
 			isa = PBXGroup;
 			children = (
@@ -278,7 +260,6 @@
 			isa = PBXGroup;
 			children = (
 				BFF1FBD92813092700142235 /* WelcomeStackView.swift */,
-				BFF1FBDD2813144200142235 /* InfoTableViewCell.swift */,
 				BFF1FBE228134ED300142235 /* TableHeaderStackView.swift */,
 				BFF1FBE028133E9600142235 /* TagCollectionViewCell.swift */,
 			);
@@ -439,7 +420,6 @@
 				BFF1FBB72812C4D400142235 /* TodoTableViewController.swift in Sources */,
 				BFF1FB8E2812C38300142235 /* SceneDelegate.swift in Sources */,
 				BFF1FBD82812FDAB00142235 /* UIColor+.swift in Sources */,
-				BFF1FBDE2813144200142235 /* InfoTableViewCell.swift in Sources */,
 				BFF1FBB92812C4DD00142235 /* PersonSettingsSwiftUIView.swift in Sources */,
 				BFF1FBDC28130ADA00142235 /* UIStackView+.swift in Sources */,
 				BFF1FBE128133E9600142235 /* TagCollectionViewCell.swift in Sources */,
