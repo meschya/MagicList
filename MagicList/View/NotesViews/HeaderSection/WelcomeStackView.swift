@@ -98,6 +98,10 @@ final class WelcomeStackView: UIStackView {
         personImageView.image = UIImage(systemName: image)
     }
     
+    func setCount(_ count: Int) {
+        countNotesLabel.attributedText = modificatorForCountNotesLabel(count)
+    }
+    
     // MARK: - Setups
     
     // MARK: Private
@@ -135,7 +139,6 @@ final class WelcomeStackView: UIStackView {
     }
     
     private func addCountNotesLabelSetups() {
-        countNotesLabel.attributedText = modificatorForCountNotesLabel()
         countNotesLabel.numberOfLines = 2
     }
     
@@ -171,7 +174,7 @@ final class WelcomeStackView: UIStackView {
     
     // MARK: Private
     
-    private func modificatorForCountNotesLabel() -> NSMutableAttributedString {
+    private func modificatorForCountNotesLabel(_ count: Int) -> NSMutableAttributedString {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd MMMM"
         let firstAttributes: [NSAttributedString.Key: Any] = [
@@ -185,7 +188,7 @@ final class WelcomeStackView: UIStackView {
         
         let firstString = NSMutableAttributedString(string: "У Вас ", attributes: firstAttributes)
         
-        let secondString = NSAttributedString(string: "2 заметки ", attributes: secondAttributes)
+        let secondString = NSAttributedString(string: "\(count) заметки ", attributes: secondAttributes)
         let thirdString = NSAttributedString(string: "на \(dateFormatter.string(from: Date.now)) 📌", attributes: firstAttributes)
         firstString.append(secondString)
         firstString.append(thirdString)

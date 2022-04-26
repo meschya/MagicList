@@ -6,9 +6,13 @@ final class NotesTableViewController: UITableViewController, NSFetchedResultsCon
 
     // MARK: Private
 
-    private var notes: [Note] = []
     private var fetchResultController: NSFetchedResultsController<Note>!
     private let headerView = WelcomeStackView()
+    private var notes: [Note] = [] {
+        didSet {
+            self.tableView.reloadData()
+        }
+    }
 
     // MARK: - Lifecycle
 
@@ -65,7 +69,15 @@ final class NotesTableViewController: UITableViewController, NSFetchedResultsCon
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(NotesTableViewCell.self, forCellReuseIdentifier: NotesTableViewCell.identifier)
+    }
+    
+    // MARK: - Helpers
+    
+    // MARK: Private
+    
+    private func addHeaderView() {
         let headerView = WelcomeStackView(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: 240))
+        headerView.setCount(notes.count)
         headerView.tableHeaderStackView.delegate = self
         tableView.tableHeaderView = headerView
     }
@@ -82,19 +94,19 @@ final class NotesTableViewController: UITableViewController, NSFetchedResultsCon
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: NotesTableViewCell.identifier) as? NotesTableViewCell {
+            addHeaderView()
             let note = notes[indexPath.row]
             cell.notesStackView.setInfo(note.titleNote ?? "",
                                         note.descriptionNote ?? "",
                                         note.tagNote ?? "",
                                         note.dateAddNote ?? Date.now,
                                         note.timeAddNote ?? Date.now)
-            // headerView.setCountNotes(notes.count)
             return cell
         }
 
         return UITableViewCell()
     }
-
+    
     // MARK: Fetch request methods
 
     func controllerWillChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
