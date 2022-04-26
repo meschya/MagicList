@@ -113,7 +113,6 @@ final class NotesTableViewController: UITableViewController, NSFetchedResultsCon
         noteScreenViewController.editNote = notes[indexPath.row]
         viewScreen(noteScreenViewController)
     }
-
     
     // MARK: Fetch request methods
 
