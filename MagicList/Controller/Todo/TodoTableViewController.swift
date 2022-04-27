@@ -161,15 +161,7 @@ final class TodoTableViewController: UIViewController {
 extension TodoTableViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        return toDoTasksArray.prefix(15).count
-    
-        
-        
-        
-        
-        
-        
-        return Int()
+        return toDoTasksArray.count
         
         
     }
