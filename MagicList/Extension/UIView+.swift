@@ -7,7 +7,7 @@ extension UIView {
 }
 
 extension UIView {
-    func addMask (_ views: UIView...) {
+    func autoresizingMask (_ views: UIView...) {
         for view in views {
             view.translatesAutoresizingMaskIntoConstraints = false
         }

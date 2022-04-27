@@ -5,7 +5,7 @@ final class ToDoTableViewCell: UITableViewCell {
     static let identifier = "ToDoTableViewCell"
     
     private let mainView = UIView()
-    private let taskTextView = UITextView()
+    private let taskLabel = UILabel()
     private let checkBoxView = CircularCheckbox()
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
@@ -13,6 +13,7 @@ final class ToDoTableViewCell: UITableViewCell {
         addSubviews()
         addConstraints()
         setupUI()
+        setupUIForTextLabel()
     }
     
     required init?(coder: NSCoder) {
@@ -21,37 +22,48 @@ final class ToDoTableViewCell: UITableViewCell {
     
     private func addSubviews() {
         contentView.addSubview(mainView)
-        mainView.addAllSubviews(taskTextView,
+        mainView.addAllSubviews(taskLabel,
                                 checkBoxView
         )
     }
     
     func setInfo(params: ToDo) {
-        taskTextView.text = params.title
+        taskLabel.text = params.title
+        checkBoxView.setChecked(params)
     }
     
     private func setupUI() {
-        _ = UITapGestureRecognizer(target: self, action: #selector(didTapCheckbox))
+        mainView.backgroundColor = .theme.cellColor
+        mainView.layer.cornerRadius = 10
+        mainView.clipsToBounds = true
+        let gesture = UITapGestureRecognizer(target: self, action: #selector(didTapCheckbox))
+        checkBoxView.addGestureRecognizer(gesture)
     }
     
     private func addConstraints() {
-//        addMask(mainView, taskTextView, checkBoxView)
-        mainView.translatesAutoresizingMaskIntoConstraints = false
-        mainView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 10).isActive = true
-        mainView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -10).isActive = true
-        mainView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 10).isActive = true
-        mainView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -10).isActive = true
+        autoresizingMask(mainView, checkBoxView, taskLabel)
         
-        checkBoxView.translatesAutoresizingMaskIntoConstraints = false
+        mainView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 15).isActive = true
+        mainView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -15).isActive = true
+        mainView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 15).isActive = true
+        mainView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -15).isActive = true
+        
         checkBoxView.centerYAnchor.constraint(equalTo: mainView.centerYAnchor).isActive = true
-        checkBoxView.leadingAnchor.constraint(equalTo: checkBoxView.leadingAnchor, constant: 10).isActive = true
+        checkBoxView.leadingAnchor.constraint(equalTo: mainView.leadingAnchor, constant: 20).isActive = true
+        checkBoxView.widthAnchor.constraint(equalToConstant: 50).isActive = true
+        checkBoxView.heightAnchor.constraint(equalToConstant: 50).isActive = true
         
-        taskTextView.translatesAutoresizingMaskIntoConstraints = false
-        taskTextView.centerYAnchor.constraint(equalTo: mainView.centerYAnchor).isActive = true
-        taskTextView.trailingAnchor.constraint(equalTo: mainView.trailingAnchor, constant: -10).isActive = true
+        taskLabel.centerYAnchor.constraint(equalTo: mainView.centerYAnchor).isActive = true
+        taskLabel.leadingAnchor.constraint(equalTo: mainView.centerXAnchor, constant: -40).isActive = true
+        taskLabel.trailingAnchor.constraint(equalTo: mainView.trailingAnchor).isActive = true
+    }
+    
+    private func setupUIForTextLabel() {
+        taskLabel.font = .altone(25, .regular)
+        taskLabel.numberOfLines = 0
+        taskLabel.textColor = .theme.accent
     }
     
     @objc private func didTapCheckbox() {
     }
-   
 }
