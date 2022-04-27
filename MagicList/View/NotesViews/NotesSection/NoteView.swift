@@ -77,7 +77,7 @@ final class NoteView: UIView {
     
     private func addTagButtonConstraints() {
         tagButton.translatesAutoresizingMaskIntoConstraints = false
-        tagButton.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 0.2).isActive = true
+        tagButton.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 0.25).isActive = true
     }
     
     // MARK: - Setups
@@ -143,6 +143,8 @@ final class NoteView: UIView {
         tagButton.backgroundColor?.withAlphaComponent(0.2)
         tagButton.layer.cornerRadius = 10
         tagButton.titleLabel?.font = .altone(12, .bold)
+        tagButton.titleLabel?.adjustsFontSizeToFitWidth = true
+        tagButton.titleLabel?.minimumScaleFactor = 0.5
     }
     
     private func addArrowImageViewSetups() {

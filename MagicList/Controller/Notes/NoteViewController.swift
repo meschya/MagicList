@@ -63,7 +63,7 @@ final class NoteViewController: UIViewController, NSFetchedResultsControllerDele
         noteStackView.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor).isActive = true
         noteStackView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor).isActive = true
         noteStackView.widthAnchor.constraint(equalTo: scrollView.widthAnchor, multiplier: 1).isActive = true
-        noteStackView.heightAnchor.constraint(equalToConstant: 730).isActive = true
+        noteStackView.heightAnchor.constraint(equalToConstant: 660).isActive = true
     }
     
     private func headerStackViewConstraints() {

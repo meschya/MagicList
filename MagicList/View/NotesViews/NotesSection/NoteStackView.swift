@@ -112,6 +112,8 @@ final class NoteStackView: UIStackView {
         timeLabel.textAlignment = .right
         timeLabel.textColor = .theme.title
         timeLabel.font = .altone(17, .regular)
+        timeLabel.adjustsFontSizeToFitWidth = true
+        timeLabel.minimumScaleFactor = 0.5
     }
     
     private func addLineSetups() {
