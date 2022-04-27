@@ -13,7 +13,7 @@
 		6B6E7E39281326700044661E /* UserStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B6E7E38281326700044661E /* UserStruct.swift */; };
 		BF24DAC92819B0FE00A39EBA /* PersonInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF24DAC82819B0FE00A39EBA /* PersonInformation.swift */; };
 		BF24DACB2819B10600A39EBA /* ContactCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF24DACA2819B10600A39EBA /* ContactCell.swift */; };
-		BF24DACD2819B15200A39EBA /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF24DACC2819B15200A39EBA /* UserSettings.swift */; };
+		BF24DAD42819B28900A39EBA /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF24DAD32819B28900A39EBA /* UserSettings.swift */; };
 		BFF1FB8C2812C38300142235 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF1FB8B2812C38300142235 /* AppDelegate.swift */; };
 		BFF1FB8E2812C38300142235 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF1FB8D2812C38300142235 /* SceneDelegate.swift */; };
 		BFF1FB962812C38300142235 /* MagicList.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BFF1FB942812C38300142235 /* MagicList.xcdatamodeld */; };
@@ -62,7 +62,7 @@
 		90DFE6F1A2A1A56B0E8DB31F /* Pods_MagicList.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MagicList.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF24DAC82819B0FE00A39EBA /* PersonInformation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PersonInformation.swift; path = ../../../../../Desktop/MagicList/MagicList/Controller/PersonSettings/PersonInformation.swift; sourceTree = "<group>"; };
 		BF24DACA2819B10600A39EBA /* ContactCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContactCell.swift; path = ../../../../../Desktop/MagicList/MagicList/Controller/PersonSettings/ContactCell.swift; sourceTree = "<group>"; };
-		BF24DACC2819B15200A39EBA /* UserSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserSettings.swift; path = ../../../../Desktop/MagicList/MagicList/Manager/UserSettings.swift; sourceTree = "<group>"; };
+		BF24DAD32819B28900A39EBA /* UserSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSettings.swift; sourceTree = "<group>"; };
 		BFF1FB882812C38300142235 /* MagicList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MagicList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFF1FB8B2812C38300142235 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BFF1FB8D2812C38300142235 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -148,6 +148,8 @@
 		BF55A6AE28187249009ED4FD /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				BF24DAD32819B28900A39EBA /* UserSettings.swift */,
+				6B6E7E38281326700044661E /* UserStruct.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -284,8 +286,6 @@
 		BFF1FBBA2812C4E000142235 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
-				BF24DACC2819B15200A39EBA /* UserSettings.swift */,
-				6B6E7E38281326700044661E /* UserStruct.swift */,
 				BFF1FBBB2812C5F300142235 /* NetworkingManager.swift */,
 				BFF1FBD02812C6E800142235 /* NotificationManager.swift */,
 				BFF1FBF42816C20A00142235 /* CoreDataManager.swift */,
@@ -453,6 +453,7 @@
 				BFF1FBCF2812C66D00142235 /* UIFont+.swift in Sources */,
 				BFF1FBF52816C20A00142235 /* CoreDataManager.swift in Sources */,
 				BFF1FBD12812C6E800142235 /* NotificationManager.swift in Sources */,
+				BF24DAD42819B28900A39EBA /* UserSettings.swift in Sources */,
 				353D8B612814CA8700D52E72 /* ToDoTableViewCell.swift in Sources */,
 				BF24DAC92819B0FE00A39EBA /* PersonInformation.swift in Sources */,
 				BFF1FBEC281374C000142235 /* NotesTableViewCell.swift in Sources */,
@@ -472,7 +473,6 @@
 				BFF1FB962812C38300142235 /* MagicList.xcdatamodeld in Sources */,
 				BFF1FBDA2813092700142235 /* WelcomeStackView.swift in Sources */,
 				BFF1FBEE2814163500142235 /* NotesTableViewController.swift in Sources */,
-				BF24DACD2819B15200A39EBA /* UserSettings.swift in Sources */,
 				DD6E933E28169384003492D1 /* (null) in Sources */,
 				BF24DACB2819B10600A39EBA /* ContactCell.swift in Sources */,
 			);

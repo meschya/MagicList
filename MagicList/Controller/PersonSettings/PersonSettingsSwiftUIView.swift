@@ -1,11 +1,9 @@
 import SwiftUI
 
 struct PersonSettingsSwiftUIView: View {
-
     @ObservedObject var person = User()
 
     var body: some View {
-
         NavigationView {
             ZStack {
                 Color.theme.background
@@ -75,12 +73,9 @@ struct PersonSettingsSwiftUIView: View {
 
                                 ])
                 })
-                .sheet(isPresented: $person.showInformation){
-                   
+                .sheet(isPresented: $person.showInformation) {
                     PersonInformation(person: self.person)
-                   
                 }
-                
             }
             .gesture(TapGesture(count: 1).onEnded { _ in
                 person.rotation += 360
@@ -90,13 +85,13 @@ struct PersonSettingsSwiftUIView: View {
             .shadow(color: Color.theme.background, radius: 10, x: 0, y: 10)
             .ignoresSafeArea()
         }
-        .onAppear{
-            guard let persons = CoreDataManager.instance.getPerson() else { return }
-            self.person.user = persons
-            
+        .onAppear {
+            DispatchQueue.main .async {
+                guard let persons = CoreDataManager.instance.getPerson() else { return }
+                self.person.user = persons
             }
         }
-    
+    }
 
     init() {
         let navBarAppearance = UINavigationBar.appearance()
