@@ -18,14 +18,15 @@ struct PersonInformation: View {
                                                  phoneNumber: person.phoneNumber,
                                                  phonePrefix: person.phonePrefix,
                                                  image: person.image)
-
-                        person.user.append(users)
+                        CoreDataManager.instance.savePerson(users)
+                        
                         presentationMode.wrappedValue.dismiss()
-
                     } label: {
                         Text("Save")
                             .foregroundColor(Color.theme.accent)
+                            .opacity(person.isValid ? 1 : 0).animation(.spring())
                     }
+                    .disabled(!person.isValid)
                 }
                 .padding(.horizontal, 70)
                 .padding(.bottom)
@@ -56,7 +57,7 @@ struct PersonInformation: View {
                         }
                         .padding()
                         ZStack {
-                            Text("SurName")
+                            Text("Surname")
                                 .foregroundColor(Color.theme.title)
                                 .opacity(0.9)
                                 .offset(y: person.surName.isEmpty ? -4 : -25)
@@ -86,19 +87,15 @@ struct PersonInformation: View {
                     Color.theme.cellColor
 
                     VStack {
-
                         ZStack {
-
                             HStack {
-
                                 Text("+375")
                                     .padding(.leading, 30)
                                     .font(Font(uiFont: .altone(25, .extraBold)))
 
                                 Picker(selection: $person.phonePrefix) {
                                     ForEach(person.prefix, id: \.self) {
-                                        Text($0)
-                                            .font(Font(uiFont: .altone(25, .light)))
+                                        Text("(\($0))")
                                             .foregroundColor(Color.theme.accent)
                                     }
                                 } label: {
@@ -109,7 +106,7 @@ struct PersonInformation: View {
                                 TextField("Number", text: $person.phoneNumber)
                                     .keyboardType(.numberPad)
                                     .frame(width: 100)
-                                    .font(Font(uiFont: .altone(25, .bold)))
+                                    .font(Font(uiFont: .altone(20, .bold)))
 
                                 Spacer()
                             }
@@ -127,12 +124,12 @@ struct PersonInformation: View {
                         ZStack {
                             ScrollView(.horizontal, showsIndicators: false) {
                                 HStack {
-                                    ForEach(person.numberImage, id: \.self) { img in
+                                    ForEach(person.arrayImage, id: \.self) { img in
 
                                         Button {
-                                            person.image = img
+                                            person.image = String(img)
                                         } label: {
-                                            Image(img)
+                                            Image(String(img))
                                                 .resizable()
                                                 .frame(width: 180, height: 180)
                                                 .clipShape(RoundedRectangle(cornerRadius: 20))
@@ -149,6 +146,13 @@ struct PersonInformation: View {
             }
         }
         .ignoresSafeArea()
+        .onAppear {
+            person.isFormValid
+                .receive(on: RunLoop.main)
+                .assign(to: \.person.isValid, on: self)
+                .store(in: &person.cancellable)
+            
+        }
     }
 }
 
