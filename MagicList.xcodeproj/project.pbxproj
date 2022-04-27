@@ -31,7 +31,6 @@
 		BFF1FBD82812FDAB00142235 /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF1FBD72812FDAB00142235 /* UIColor+.swift */; };
 		BFF1FBDA2813092700142235 /* WelcomeStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF1FBD92813092700142235 /* WelcomeStackView.swift */; };
 		BFF1FBDC28130ADA00142235 /* UIStackView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF1FBDB28130ADA00142235 /* UIStackView+.swift */; };
-		BFF1FBDE2813144200142235 /* InfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF1FBDD2813144200142235 /* InfoTableViewCell.swift */; };
 		BFF1FBE128133E9600142235 /* TagCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF1FBE028133E9600142235 /* TagCollectionViewCell.swift */; };
 		BFF1FBE328134ED300142235 /* TableHeaderStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF1FBE228134ED300142235 /* TableHeaderStackView.swift */; };
 		BFF1FBE72813651700142235 /* NoteStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF1FBE62813651700142235 /* NoteStackView.swift */; };
@@ -40,6 +39,7 @@
 		BFF1FBEE2814163500142235 /* NotesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF1FBED2814163500142235 /* NotesTableViewController.swift */; };
 		BFF1FBF0281417FD00142235 /* NoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF1FBEF281417FD00142235 /* NoteViewController.swift */; };
 		BFF1FBF32814183B00142235 /* Transfers.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF1FBF22814183B00142235 /* Transfers.swift */; };
+		BFF1FBF52816C20A00142235 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF1FBF42816C20A00142235 /* CoreDataManager.swift */; };
 		CB5C7B7F110E56E492657A9B /* Pods_MagicList.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90DFE6F1A2A1A56B0E8DB31F /* Pods_MagicList.framework */; };
 		DD6E933E28169384003492D1 /* PersonInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6E933D28169384003492D1 /* PersonInformation.swift */; };
 		DD6E935928173DAB003492D1 /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6E935828173DAB003492D1 /* UserSettings.swift */; };
@@ -76,7 +76,6 @@
 		BFF1FBD72812FDAB00142235 /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
 		BFF1FBD92813092700142235 /* WelcomeStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeStackView.swift; sourceTree = "<group>"; };
 		BFF1FBDB28130ADA00142235 /* UIStackView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+.swift"; sourceTree = "<group>"; };
-		BFF1FBDD2813144200142235 /* InfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoTableViewCell.swift; sourceTree = "<group>"; };
 		BFF1FBE028133E9600142235 /* TagCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagCollectionViewCell.swift; sourceTree = "<group>"; };
 		BFF1FBE228134ED300142235 /* TableHeaderStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableHeaderStackView.swift; sourceTree = "<group>"; };
 		BFF1FBE62813651700142235 /* NoteStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteStackView.swift; sourceTree = "<group>"; };
@@ -85,9 +84,11 @@
 		BFF1FBED2814163500142235 /* NotesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesTableViewController.swift; sourceTree = "<group>"; };
 		BFF1FBEF281417FD00142235 /* NoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteViewController.swift; sourceTree = "<group>"; };
 		BFF1FBF22814183B00142235 /* Transfers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transfers.swift; sourceTree = "<group>"; };
+
 		DD6E933D28169384003492D1 /* PersonInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonInformation.swift; sourceTree = "<group>"; };
 		DD6E935828173DAB003492D1 /* UserSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettings.swift; sourceTree = "<group>"; };
 		DD9C931328187616006F7744 /* CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreData.swift; sourceTree = "<group>"; };
+
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +120,13 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		BF55A6AE28187249009ED4FD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		BFF1FB7F2812C38300142235 = {
 			isa = PBXGroup;
 			children = (
@@ -143,8 +151,8 @@
 				BFF1FBF12814182500142235 /* Protocol */,
 				BFF1FBBA2812C4E000142235 /* Manager */,
 				BFF1FBA62812C40A00142235 /* Font */,
+				BF55A6AE28187249009ED4FD /* Model */,
 				BFF1FBA52812C40400142235 /* Extension */,
-				BFF1FBA42812C3FF00142235 /* Model */,
 				BFF1FBA32812C3FB00142235 /* View */,
 				BFF1FBA22812C3F200142235 /* Controller */,
 				BFF1FB8B2812C38300142235 /* AppDelegate.swift */,
@@ -172,17 +180,8 @@
 			isa = PBXGroup;
 			children = (
 				BFF1FBB02812C4A200142235 /* NotesViews */,
-				BFF1FBAF2812C49C00142235 /* TodoViews */,
-				BFF1FBAE2812C49300142235 /* PersonSettingsViews */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		BFF1FBA42812C3FF00142235 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		BFF1FBA52812C40400142235 /* Extension */ = {
@@ -245,20 +244,6 @@
 			path = Notes;
 			sourceTree = "<group>";
 		};
-		BFF1FBAE2812C49300142235 /* PersonSettingsViews */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = PersonSettingsViews;
-			sourceTree = "<group>";
-		};
-		BFF1FBAF2812C49C00142235 /* TodoViews */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = TodoViews;
-			sourceTree = "<group>";
-		};
 		BFF1FBB02812C4A200142235 /* NotesViews */ = {
 			isa = PBXGroup;
 			children = (
@@ -274,6 +259,7 @@
 				6B6E7E38281326700044661E /* UserStruct.swift */,
 				BFF1FBBB2812C5F300142235 /* NetworkingManager.swift */,
 				BFF1FBD02812C6E800142235 /* NotificationManager.swift */,
+
 				DD6E935828173DAB003492D1 /* UserSettings.swift */,
 				DD9C931328187616006F7744 /* CoreData.swift */,
 			);
@@ -284,7 +270,6 @@
 			isa = PBXGroup;
 			children = (
 				BFF1FBD92813092700142235 /* WelcomeStackView.swift */,
-				BFF1FBDD2813144200142235 /* InfoTableViewCell.swift */,
 				BFF1FBE228134ED300142235 /* TableHeaderStackView.swift */,
 				BFF1FBE028133E9600142235 /* TagCollectionViewCell.swift */,
 			);
@@ -437,6 +422,7 @@
 				BFF1FBF0281417FD00142235 /* NoteViewController.swift in Sources */,
 				6B6E7E39281326700044661E /* UserStruct.swift in Sources */,
 				BFF1FBCF2812C66D00142235 /* UIFont+.swift in Sources */,
+				BFF1FBF52816C20A00142235 /* CoreDataManager.swift in Sources */,
 				BFF1FBD12812C6E800142235 /* NotificationManager.swift in Sources */,
 				BFF1FBEC281374C000142235 /* NotesTableViewCell.swift in Sources */,
 				BFF1FBE72813651700142235 /* NoteStackView.swift in Sources */,
@@ -444,7 +430,6 @@
 				BFF1FBB72812C4D400142235 /* TodoTableViewController.swift in Sources */,
 				BFF1FB8E2812C38300142235 /* SceneDelegate.swift in Sources */,
 				BFF1FBD82812FDAB00142235 /* UIColor+.swift in Sources */,
-				BFF1FBDE2813144200142235 /* InfoTableViewCell.swift in Sources */,
 				BFF1FBB92812C4DD00142235 /* PersonSettingsSwiftUIView.swift in Sources */,
 				BFF1FBDC28130ADA00142235 /* UIStackView+.swift in Sources */,
 				DD6E935928173DAB003492D1 /* UserSettings.swift in Sources */,
@@ -597,13 +582,16 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+
 				DEVELOPMENT_TEAM = B9S2MDX3F7;
+
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MagicList/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -627,13 +615,16 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+
 				DEVELOPMENT_TEAM = B9S2MDX3F7;
+
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MagicList/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

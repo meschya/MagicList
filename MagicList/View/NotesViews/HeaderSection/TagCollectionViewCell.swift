@@ -7,6 +7,16 @@ final class TagCollectionViewCell: UICollectionViewCell {
     
     // MARK: - Properties
     
+    // MARK: Public
+    
+    override var isSelected: Bool {
+        didSet {
+            UIView.animate(withDuration: 0.3) {
+                self.tagButton.backgroundColor = self.isSelected ? .theme.accent : .theme.cellColor
+            }
+        }
+    }
+    
     // MARK: Private
     
     private let tagButton: UIButton = .init()

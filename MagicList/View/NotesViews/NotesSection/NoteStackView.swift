@@ -25,6 +25,18 @@ final class NoteStackView: UIStackView {
         fatalError("init(coder:) has not been implemented")
     }
     
+    // MARK: - API
+    
+    func setInfo(_ title: String, _ desc: String, _ tag: String, _ date: Date, _ time: Date) {
+        let dateFormatter = DateFormatter()
+        let timeFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd.MM yyyy"
+        timeFormatter.dateFormat = "HH:mm"
+        noteView.setInfo(title, desc, tag)
+        dateLabel.text = dateFormatter.string(from: date)
+        timeLabel.text = timeFormatter.string(from: date)
+    }
+    
     // MARK: - Constraints
     
     // MARK: Private
@@ -100,6 +112,8 @@ final class NoteStackView: UIStackView {
         timeLabel.textAlignment = .right
         timeLabel.textColor = .theme.title
         timeLabel.font = .altone(17, .regular)
+        timeLabel.adjustsFontSizeToFitWidth = true
+        timeLabel.minimumScaleFactor = 0.5
     }
     
     private func addLineSetups() {
