@@ -61,6 +61,7 @@ final class WelcomeStackView: UIStackView {
     private func addContraints() {
         addPersonImageViewConstraints()
         addTagCollectionViewConstraints()
+        addWelcomeStackViewConstraint()
         addTableHeaderStackViewConstraints()
     }
     
@@ -71,10 +72,16 @@ final class WelcomeStackView: UIStackView {
         personImageView.heightAnchor.constraint(equalToConstant: 50).isActive = true
     }
     
+    private func addWelcomeStackViewConstraint() {
+        welcomeStackView.translatesAutoresizingMaskIntoConstraints = false
+        welcomeStackView.topAnchor.constraint(equalTo: topAnchor, constant: 10).isActive = true
+        welcomeStackView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20).isActive = true
+    }
+    
     private func addTagCollectionViewConstraints() {
         tagCollectionView.translatesAutoresizingMaskIntoConstraints = false
-        tagCollectionView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 15).isActive = true
-        tagCollectionView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -15).isActive = true
+        tagCollectionView.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
+        tagCollectionView.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
         tagCollectionView.heightAnchor.constraint(equalToConstant: 50).isActive = true
     }
     
@@ -86,9 +93,13 @@ final class WelcomeStackView: UIStackView {
     
     // MARK: - API
     
-    private func set(_ text: String, _ image: String) {
+    func set(_ text: String, _ image: String) {
         welcomeLabel.text = text
         personImageView.image = UIImage(systemName: image)
+    }
+    
+    func setCount(_ count: Int) {
+        countNotesLabel.attributedText = modificatorForCountNotesLabel(count)
     }
     
     // MARK: - Setups
@@ -128,7 +139,6 @@ final class WelcomeStackView: UIStackView {
     }
     
     private func addCountNotesLabelSetups() {
-        countNotesLabel.attributedText = modificatorForCountNotesLabel()
         countNotesLabel.numberOfLines = 2
     }
     
@@ -139,7 +149,7 @@ final class WelcomeStackView: UIStackView {
     }
     
     private func addPersonImageSetups() {
-        personImageView.layer.cornerRadius = personImageView.frame.size.width / 2
+        personImageView.layer.cornerRadius = personImageView.frame.size.width/2
         personImageView.clipsToBounds = true
         personImageView.image = UIImage(named: "6")
         personImageView.contentMode = .scaleAspectFill
@@ -150,7 +160,7 @@ final class WelcomeStackView: UIStackView {
         tagCollectionView.collectionViewLayout = layout
         tagCollectionView.showsHorizontalScrollIndicator = false
         layout.scrollDirection = .horizontal
-        layout.sectionInset = UIEdgeInsets(top: 20, left: 0, bottom: 0, right: 0)
+        layout.sectionInset = UIEdgeInsets(top: 20, left: 10, bottom: 0, right: 10)
         layout.itemSize = CGSize(width: 100, height: 60)
     }
     
@@ -164,7 +174,7 @@ final class WelcomeStackView: UIStackView {
     
     // MARK: Private
     
-    private func modificatorForCountNotesLabel() -> NSMutableAttributedString {
+    private func modificatorForCountNotesLabel(_ count: Int) -> NSMutableAttributedString {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd MMMM"
         let firstAttributes: [NSAttributedString.Key: Any] = [
@@ -177,7 +187,8 @@ final class WelcomeStackView: UIStackView {
         ]
         
         let firstString = NSMutableAttributedString(string: "У Вас ", attributes: firstAttributes)
-        let secondString = NSAttributedString(string: "53 заметки ", attributes: secondAttributes)
+        
+        let secondString = NSAttributedString(string: "\(count) заметки ", attributes: secondAttributes)
         let thirdString = NSAttributedString(string: "на \(dateFormatter.string(from: Date.now)) 📌", attributes: firstAttributes)
         firstString.append(secondString)
         firstString.append(thirdString)
