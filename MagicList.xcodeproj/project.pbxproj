@@ -43,7 +43,7 @@
 		CB5C7B7F110E56E492657A9B /* Pods_MagicList.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90DFE6F1A2A1A56B0E8DB31F /* Pods_MagicList.framework */; };
 		DD6E933E28169384003492D1 /* PersonInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6E933D28169384003492D1 /* PersonInformation.swift */; };
 		DD6E935928173DAB003492D1 /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6E935828173DAB003492D1 /* UserSettings.swift */; };
-		DD9C931428187616006F7744 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9C931328187616006F7744 /* CoreDataManager.swift */; };
+		DD9C931428187616006F7744 /* CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9C931328187616006F7744 /* CoreData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -87,7 +87,7 @@
 		BFF1FBF22814183B00142235 /* Transfers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transfers.swift; sourceTree = "<group>"; };
 		DD6E933D28169384003492D1 /* PersonInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonInformation.swift; sourceTree = "<group>"; };
 		DD6E935828173DAB003492D1 /* UserSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettings.swift; sourceTree = "<group>"; };
-		DD9C931328187616006F7744 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		DD9C931328187616006F7744 /* CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -275,7 +275,7 @@
 				BFF1FBBB2812C5F300142235 /* NetworkingManager.swift */,
 				BFF1FBD02812C6E800142235 /* NotificationManager.swift */,
 				DD6E935828173DAB003492D1 /* UserSettings.swift */,
-				DD9C931328187616006F7744 /* CoreDataManager.swift */,
+				DD9C931328187616006F7744 /* CoreData.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -451,7 +451,7 @@
 				BFF1FBE128133E9600142235 /* TagCollectionViewCell.swift in Sources */,
 				BFF1FBAA2812C44500142235 /* MainTabBarController.swift in Sources */,
 				BFF1FBBC2812C5F300142235 /* NetworkingManager.swift in Sources */,
-				DD9C931428187616006F7744 /* CoreDataManager.swift in Sources */,
+				DD9C931428187616006F7744 /* CoreData.swift in Sources */,
 				BFF1FBD42812FBAB00142235 /* Color+.swift in Sources */,
 				BFF1FB962812C38300142235 /* MagicList.xcdatamodeld in Sources */,
 				BFF1FBDA2813092700142235 /* WelcomeStackView.swift in Sources */,
