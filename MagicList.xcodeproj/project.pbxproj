@@ -11,6 +11,9 @@
 		353D8B63281543AE00D52E72 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353D8B62281543AE00D52E72 /* UIView+.swift */; };
 		353D8B6728154C2C00D52E72 /* CustomCheckbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353D8B6628154C2C00D52E72 /* CustomCheckbox.swift */; };
 		6B6E7E39281326700044661E /* UserStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B6E7E38281326700044661E /* UserStruct.swift */; };
+		BF24DAC92819B0FE00A39EBA /* PersonInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF24DAC82819B0FE00A39EBA /* PersonInformation.swift */; };
+		BF24DACB2819B10600A39EBA /* ContactCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF24DACA2819B10600A39EBA /* ContactCell.swift */; };
+		BF24DACD2819B15200A39EBA /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF24DACC2819B15200A39EBA /* UserSettings.swift */; };
 		BFF1FB8C2812C38300142235 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF1FB8B2812C38300142235 /* AppDelegate.swift */; };
 		BFF1FB8E2812C38300142235 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF1FB8D2812C38300142235 /* SceneDelegate.swift */; };
 		BFF1FB962812C38300142235 /* MagicList.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BFF1FB942812C38300142235 /* MagicList.xcdatamodeld */; };
@@ -44,9 +47,9 @@
 		BFF1FBF32814183B00142235 /* Transfers.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF1FBF22814183B00142235 /* Transfers.swift */; };
 		BFF1FBF52816C20A00142235 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF1FBF42816C20A00142235 /* CoreDataManager.swift */; };
 		CB5C7B7F110E56E492657A9B /* Pods_MagicList.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90DFE6F1A2A1A56B0E8DB31F /* Pods_MagicList.framework */; };
-		DD6E933E28169384003492D1 /* PersonInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6E933D28169384003492D1 /* PersonInformation.swift */; };
-		DD6E935928173DAB003492D1 /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6E935828173DAB003492D1 /* UserSettings.swift */; };
-		DD9C931428187616006F7744 /* CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9C931328187616006F7744 /* CoreData.swift */; };
+		DD6E933E28169384003492D1 /* (null) in Sources */ = {isa = PBXBuildFile; };
+		DD6E935928173DAB003492D1 /* (null) in Sources */ = {isa = PBXBuildFile; };
+		DD9C931428187616006F7744 /* (null) in Sources */ = {isa = PBXBuildFile; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +60,9 @@
 		3B5EE07FB4DA967B9298A2C6 /* Pods-MagicList.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MagicList.release.xcconfig"; path = "Target Support Files/Pods-MagicList/Pods-MagicList.release.xcconfig"; sourceTree = "<group>"; };
 		6B6E7E38281326700044661E /* UserStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStruct.swift; sourceTree = "<group>"; };
 		90DFE6F1A2A1A56B0E8DB31F /* Pods_MagicList.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MagicList.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF24DAC82819B0FE00A39EBA /* PersonInformation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PersonInformation.swift; path = ../../../../../Desktop/MagicList/MagicList/Controller/PersonSettings/PersonInformation.swift; sourceTree = "<group>"; };
+		BF24DACA2819B10600A39EBA /* ContactCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContactCell.swift; path = ../../../../../Desktop/MagicList/MagicList/Controller/PersonSettings/ContactCell.swift; sourceTree = "<group>"; };
+		BF24DACC2819B15200A39EBA /* UserSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserSettings.swift; path = ../../../../Desktop/MagicList/MagicList/Manager/UserSettings.swift; sourceTree = "<group>"; };
 		BFF1FB882812C38300142235 /* MagicList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MagicList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFF1FB8B2812C38300142235 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BFF1FB8D2812C38300142235 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -90,9 +96,7 @@
 		BFF1FBED2814163500142235 /* NotesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesTableViewController.swift; sourceTree = "<group>"; };
 		BFF1FBEF281417FD00142235 /* NoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteViewController.swift; sourceTree = "<group>"; };
 		BFF1FBF22814183B00142235 /* Transfers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transfers.swift; sourceTree = "<group>"; };
-
 		BFF1FBF42816C20A00142235 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
-
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -243,8 +247,9 @@
 		BFF1FBAB2812C47600142235 /* PersonSettings */ = {
 			isa = PBXGroup;
 			children = (
+				BF24DACA2819B10600A39EBA /* ContactCell.swift */,
+				BF24DAC82819B0FE00A39EBA /* PersonInformation.swift */,
 				BFF1FBB82812C4DD00142235 /* PersonSettingsSwiftUIView.swift */,
-				DD6E933D28169384003492D1 /* PersonInformation.swift */,
 			);
 			path = PersonSettings;
 			sourceTree = "<group>";
@@ -279,12 +284,11 @@
 		BFF1FBBA2812C4E000142235 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
+				BF24DACC2819B15200A39EBA /* UserSettings.swift */,
 				6B6E7E38281326700044661E /* UserStruct.swift */,
 				BFF1FBBB2812C5F300142235 /* NetworkingManager.swift */,
 				BFF1FBD02812C6E800142235 /* NotificationManager.swift */,
-
 				BFF1FBF42816C20A00142235 /* CoreDataManager.swift */,
-
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -450,6 +454,7 @@
 				BFF1FBF52816C20A00142235 /* CoreDataManager.swift in Sources */,
 				BFF1FBD12812C6E800142235 /* NotificationManager.swift in Sources */,
 				353D8B612814CA8700D52E72 /* ToDoTableViewCell.swift in Sources */,
+				BF24DAC92819B0FE00A39EBA /* PersonInformation.swift in Sources */,
 				BFF1FBEC281374C000142235 /* NotesTableViewCell.swift in Sources */,
 				BFF1FBE72813651700142235 /* NoteStackView.swift in Sources */,
 				BFF1FBEA28136F8400142235 /* NoteView.swift in Sources */,
@@ -458,16 +463,18 @@
 				BFF1FBD82812FDAB00142235 /* UIColor+.swift in Sources */,
 				BFF1FBB92812C4DD00142235 /* PersonSettingsSwiftUIView.swift in Sources */,
 				BFF1FBDC28130ADA00142235 /* UIStackView+.swift in Sources */,
-				DD6E935928173DAB003492D1 /* UserSettings.swift in Sources */,
+				DD6E935928173DAB003492D1 /* (null) in Sources */,
 				BFF1FBE128133E9600142235 /* TagCollectionViewCell.swift in Sources */,
 				BFF1FBAA2812C44500142235 /* MainTabBarController.swift in Sources */,
 				BFF1FBBC2812C5F300142235 /* NetworkingManager.swift in Sources */,
-				DD9C931428187616006F7744 /* CoreData.swift in Sources */,
+				DD9C931428187616006F7744 /* (null) in Sources */,
 				BFF1FBD42812FBAB00142235 /* Color+.swift in Sources */,
 				BFF1FB962812C38300142235 /* MagicList.xcdatamodeld in Sources */,
 				BFF1FBDA2813092700142235 /* WelcomeStackView.swift in Sources */,
 				BFF1FBEE2814163500142235 /* NotesTableViewController.swift in Sources */,
-				DD6E933E28169384003492D1 /* PersonInformation.swift in Sources */,
+				BF24DACD2819B15200A39EBA /* UserSettings.swift in Sources */,
+				DD6E933E28169384003492D1 /* (null) in Sources */,
+				BF24DACB2819B10600A39EBA /* ContactCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
