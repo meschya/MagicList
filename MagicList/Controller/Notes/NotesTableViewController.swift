@@ -13,6 +13,12 @@ final class NotesTableViewController: UITableViewController, NSFetchedResultsCon
             self.tableView.reloadData()
         }
     }
+    
+    private var person: User = User() {
+        didSet {
+            self.tableView.reloadData()
+        }
+    }
 
     // MARK: - Lifecycle
 
@@ -21,6 +27,11 @@ final class NotesTableViewController: UITableViewController, NSFetchedResultsCon
         addSetups()
         coreDataSetups()
         addHeaderView()
+        
+        if let persons = CoreDataManager.instance.getPerson() {
+            self.person.user = persons
+            print("Name \(person.name)")
+        }
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -59,6 +70,8 @@ final class NotesTableViewController: UITableViewController, NSFetchedResultsCon
             }
         }
     }
+    
+    
 
     // MARK: - Setups
 

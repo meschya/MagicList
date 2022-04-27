@@ -81,15 +81,12 @@ struct PersonSettingsSwiftUIView: View {
                 person.rotation += 360
 
             })
-
             .shadow(color: Color.theme.background, radius: 10, x: 0, y: 10)
             .ignoresSafeArea()
         }
-        .onAppear {
-            DispatchQueue.main .async {
-                guard let persons = CoreDataManager.instance.getPerson() else { return }
-                self.person.user = persons
-            }
+        .onAppear() {
+            guard let persons = CoreDataManager.instance.getPerson() else { return }
+            self.person.user = persons
         }
     }
 

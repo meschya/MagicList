@@ -1,10 +1,11 @@
 import UIKit
 
 final class TodoTableViewController: UIViewController {
-    
     // MARK: - Outlets
+
     // MARK: Private
-    private var activityIndicator = UIActivityIndicatorView (style: .large)
+
+    private var activityIndicator = UIActivityIndicatorView(style: .large)
     private let tableView = UITableView()
     private let buttonsStackView = UIStackView()
     private let completedTasksButton = UIButton()
@@ -12,7 +13,9 @@ final class TodoTableViewController: UIViewController {
     private let allTasksButton = UIButton()
     
     // MARK: - Properties
+
     // MARK: Private
+
     private var toDoTasksArray: [ToDo] = [] {
         didSet {
             tableView.reloadData()
@@ -20,6 +23,7 @@ final class TodoTableViewController: UIViewController {
     }
     
     // MARK: - Lifecycle
+
     override func viewDidLoad() {
         super.viewDidLoad()
         addSubviews()
@@ -37,6 +41,7 @@ final class TodoTableViewController: UIViewController {
     }
     
     // MARK: - API
+
     private func getData() {
         NetworkingManager.instance.getData { todo in
             self.toDoTasksArray = todo
@@ -45,7 +50,9 @@ final class TodoTableViewController: UIViewController {
     }
     
     // MARK: - Setups
+
     // MARK: Private
+
     private func addSubviews() {
         view.addAllSubviews(tableView,
                             buttonsStackView)
@@ -117,7 +124,9 @@ final class TodoTableViewController: UIViewController {
     }
     
     // MARK: - Helpers
+
     // MARK: Private
+
     private func showActivityIndicator() {
         view.isUserInteractionEnabled = false
         let viewController = tabBarController ?? navigationController ?? self
@@ -138,14 +147,14 @@ final class TodoTableViewController: UIViewController {
     }
     
     @objc private func completedArray() {
-        toDoTasksArray.sort { first, second in
+        toDoTasksArray.sort { first, _ in
             first.completed == true
         }
         tableView.reloadData()
     }
     
     @objc private func notCompletedArray() {
-        toDoTasksArray.sort { first, second in
+        toDoTasksArray.sort { first, _ in
             first.completed == false
         }
         tableView.reloadData()
@@ -154,24 +163,13 @@ final class TodoTableViewController: UIViewController {
     @objc private func commonArray() {
         tableView.reloadData()
     }
-    
-    
 }
-//MARK: UITableViewDelegate, UITableViewDataSource
+
+// MARK: UITableViewDelegate, UITableViewDataSource
+
 extension TodoTableViewController: UITableViewDelegate, UITableViewDataSource {
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        return toDoTasksArray.prefix(15).count
-    
-        
-        
-        
-        
-        
-        
-        return Int()
-        
-        
+     return toDoTasksArray.prefix(15).count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

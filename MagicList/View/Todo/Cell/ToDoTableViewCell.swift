@@ -38,6 +38,7 @@ final class ToDoTableViewCell: UITableViewCell {
         mainView.clipsToBounds = true
         let gesture = UITapGestureRecognizer(target: self, action: #selector(didTapCheckbox))
         checkBoxView.addGestureRecognizer(gesture)
+        contentView.backgroundColor = .theme.background
     }
     
     private func addConstraints() {

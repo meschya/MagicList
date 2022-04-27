@@ -145,6 +145,14 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		BF24DAD52819BF5200A39EBA /* Todo */ = {
+			isa = PBXGroup;
+			children = (
+				353D8B5F2814CA6F00D52E72 /* Cell */,
+			);
+			path = Todo;
+			sourceTree = "<group>";
+		};
 		BF55A6AE28187249009ED4FD /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -206,6 +214,7 @@
 		BFF1FBA32812C3FB00142235 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				BF24DAD52819BF5200A39EBA /* Todo */,
 				BFF1FBB02812C4A200142235 /* NotesViews */,
 			);
 			path = View;
@@ -259,7 +268,6 @@
 		BFF1FBAC2812C48200142235 /* Todo */ = {
 			isa = PBXGroup;
 			children = (
-				353D8B5F2814CA6F00D52E72 /* Cell */,
 				BFF1FBB62812C4D400142235 /* TodoTableViewController.swift */,
 			);
 			path = Todo;
