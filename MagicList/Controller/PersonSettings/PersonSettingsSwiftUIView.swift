@@ -18,8 +18,9 @@ struct PersonSettingsSwiftUIView: View {
                             .frame(width: 150, height: 150)
                             .clipShape(RoundedRectangle(cornerRadius: 10))
                             .rotationEffect(.degrees(person.rotation)).animation(.spring(response: 1, dampingFraction: 2, blendDuration: 1))
+                            .clipShape(Circle())
                         Spacer()
-                        HStack {
+                        VStack(spacing: 20) {
                             Text(user.surName)
                                 .font(Font(uiFont: .altone(25, .regular)))
 
@@ -40,6 +41,7 @@ struct PersonSettingsSwiftUIView: View {
                             Text(user.phoneNumber)
                                 .font(Font(uiFont: .altone(23, .regular)))
                         }
+                        .padding()
                         Spacer()
                     }
                 }
@@ -48,7 +50,7 @@ struct PersonSettingsSwiftUIView: View {
                 .frame(width: 350, height: 450)
                 .background(Color.theme.cellColor)
                 .clipShape(RoundedRectangle(cornerRadius: 20))
-                .navigationTitle(Text("Profile"))
+                .navigationTitle(Text("Профиль"))
                 .navigationBarItems(trailing: Button {
                     person.showSheet = true
                 } label: {
@@ -61,15 +63,15 @@ struct PersonSettingsSwiftUIView: View {
                         .foregroundColor(Color.theme.background)
                 }
                 .actionSheet(isPresented: $person.showSheet) {
-                    ActionSheet(title: Text("Create Your Profile"),
-                                message: Text("There is no turning back"),
+                    ActionSheet(title: Text("Создайте свой профиль"),
+                                message: Text("Назад дороги нет"),
                                 buttons: [
-                                    .default(Text("Yes")) {
+                                    .default(Text("Да")) {
                                         CoreDataManager.instance.deleteAllPerson(self.person.user)
                                         person.showInformation = true
 
                                     },
-                                    .destructive(Text("No"))
+                                    .destructive(Text("Нет"))
 
                                 ])
                 })
@@ -85,7 +87,7 @@ struct PersonSettingsSwiftUIView: View {
 
             })
 
-            .shadow(color: Color.theme.title, radius: 10, x: 0, y: 10)
+            .shadow(color: Color.theme.background, radius: 10, x: 0, y: 10)
             .ignoresSafeArea()
         }
         .onAppear{
