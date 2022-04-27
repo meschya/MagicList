@@ -10,15 +10,10 @@ final class NotesTableViewController: UITableViewController, NSFetchedResultsCon
     private var headerView = WelcomeStackView()
     private var notes: [Note] = [] {
         didSet {
-            self.tableView.reloadData()
+            tableView.reloadData()
         }
     }
-    
-    private var person: User = User() {
-        didSet {
-            self.tableView.reloadData()
-        }
-    }
+    private var person = User()
 
     // MARK: - Lifecycle
 
@@ -27,16 +22,12 @@ final class NotesTableViewController: UITableViewController, NSFetchedResultsCon
         addSetups()
         coreDataSetups()
         addHeaderView()
-        
-        if let persons = CoreDataManager.instance.getPerson() {
-            self.person.user = persons
-            print("Name \(person.name)")
-        }
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: animated)
+        setUserInfo()
     }
 
     override func viewWillDisappear(_ animated: Bool) {
@@ -70,8 +61,6 @@ final class NotesTableViewController: UITableViewController, NSFetchedResultsCon
             }
         }
     }
-    
-    
 
     // MARK: - Setups
 
@@ -84,16 +73,24 @@ final class NotesTableViewController: UITableViewController, NSFetchedResultsCon
         tableView.dataSource = self
         tableView.register(NotesTableViewCell.self, forCellReuseIdentifier: NotesTableViewCell.identifier)
     }
-    
+
     // MARK: - Helpers
-    
+
     // MARK: Private
-    
+
     private func addHeaderView() {
         headerView = WelcomeStackView(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: 240))
         headerView.tableHeaderStackView.delegate = self
         headerView.setCount(notes.count)
         tableView.tableHeaderView = headerView
+    }
+    
+    private func setUserInfo() {
+        guard let persons = CoreDataManager.instance.getPerson() else { return }
+        person.user = persons
+        for person in person.user {
+            headerView.set(person.name, person.image)
+        }
     }
 
     // MARK: - Table view data source
@@ -120,14 +117,14 @@ final class NotesTableViewController: UITableViewController, NSFetchedResultsCon
 
         return UITableViewCell()
     }
-    
+
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let vc = NoteViewController()
         vc.note = notes[indexPath.item]
         vc.isEditingNote = true
         navigationController?.pushViewController(vc, animated: true)
     }
-    
+
     // MARK: Fetch request methods
 
     func controllerWillChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {

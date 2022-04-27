@@ -94,8 +94,8 @@ final class WelcomeStackView: UIStackView {
     // MARK: - API
     
     func set(_ text: String, _ image: String) {
-        welcomeLabel.text = text
-        personImageView.image = UIImage(systemName: image)
+        welcomeLabel.text = "Добро пожаловать, \(text)!"
+        personImageView.image = UIImage(named: image)
     }
     
     func setCount(_ count: Int) {
@@ -143,15 +143,13 @@ final class WelcomeStackView: UIStackView {
     }
     
     private func addWelcomeLabelSetups() {
-        welcomeLabel.text = "Добро пожаловать, Егор!"
         welcomeLabel.font = .altone(15, .light)
         welcomeLabel.textColor = .theme.secondTitle
     }
     
     private func addPersonImageSetups() {
-        personImageView.layer.cornerRadius = personImageView.frame.size.width/2
+        personImageView.layer.cornerRadius = personImageView.frame.size.width / 2
         personImageView.clipsToBounds = true
-        personImageView.image = UIImage(named: "6")
         personImageView.contentMode = .scaleAspectFill
     }
     
