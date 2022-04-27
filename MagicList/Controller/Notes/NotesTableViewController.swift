@@ -108,6 +108,13 @@ final class NotesTableViewController: UITableViewController, NSFetchedResultsCon
         return UITableViewCell()
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let vc = NoteViewController()
+        vc.note = notes[indexPath.item]
+        vc.isEditingNote = true
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
     // MARK: Fetch request methods
 
     func controllerWillChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {

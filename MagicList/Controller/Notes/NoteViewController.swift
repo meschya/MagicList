@@ -1,11 +1,13 @@
+import CoreData
 import UIKit
 
-final class NoteViewController: UIViewController {
+final class NoteViewController: UIViewController, NSFetchedResultsControllerDelegate {
     // MARK: - Properties
 
     // MARK: Private
 
-    private var note: Note = .init()
+    var note: Note = .init()
+    private var fetchResultController: NSFetchedResultsController<Note>!
     private let scrollView: UIScrollView = .init()
     private var noteStackView: UIStackView = .init()
     private var headerStackView: UIStackView = .init()
@@ -14,6 +16,7 @@ final class NoteViewController: UIViewController {
     private var tagNote: String?
     private var noteTextView: UITextView = .init()
     private let layout = UICollectionViewFlowLayout()
+    var isEditingNote: Bool = false
     
     // MARK: - Lifecycle
 
@@ -22,6 +25,7 @@ final class NoteViewController: UIViewController {
         addSubviews()
         addSetups()
         addConstraints()
+        fillInfoNote()
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -110,18 +114,12 @@ final class NoteViewController: UIViewController {
     }
     
     @objc private func saveButtonTapped() {
-        let checkAllInformation = (headerTextField.text != ""
-                                   && noteTextView.text != ""
-                                   && tagNote != nil
-        )
-        if checkAllInformation == true {
-            CoreDataManager.instance.saveNote(note,
-                                              headerTextField.text ?? "",
-                                              noteTextView.text ?? "",
-                                              tagNote ?? "Еда",
-                                              Date.now,
-                                              Date.now)
-            navigationController?.popViewController(animated: true)
+        if voidСheck() == true {
+            if !isEditingNote {
+                saveNoteInfo()
+            } else {
+                setNoteInfo()
+            }
         } else {
             showAllert("Заполните все поля")
         }
@@ -200,6 +198,63 @@ final class NoteViewController: UIViewController {
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         view.endEditing(true)
+    }
+    
+    private func saveNoteInfo() {
+        CoreDataManager.instance.saveNote(note,
+                                          headerTextField.text ?? "",
+                                          noteTextView.text ?? "",
+                                          tagNote ?? "Еда",
+                                          Date.now,
+                                          Date.now)
+        navigationController?.popViewController(animated: true)
+    }
+    
+    private func setNoteInfo() {
+        note.titleNote = headerTextField.text
+        note.tagNote = tagNote
+        note.descriptionNote = noteTextView.text
+        note.dateAddNote = Date.now
+        note.timeAddNote = Date.now
+        if let appDelegate = (UIApplication.shared.delegate as? AppDelegate) {
+            appDelegate.saveContext()
+        }
+        navigationController?.popViewController(animated: true)
+    }
+    
+    private func voidСheck() -> Bool {
+        let checkAllInformation: Bool = (headerTextField.text != ""
+            && noteTextView.text != ""
+            && tagNote != nil
+        )
+        return checkAllInformation
+    }
+    
+    private func getTagNumber() -> Int {
+        var i = 0
+        for tag in Tags.allValues {
+            i += 1
+            if tag.rawValue == tagNote {
+                return i - 1
+            }
+        }
+        return 2
+    }
+    
+    private func fillInfoNote() {
+        if !isEditingNote {
+            headerTextField.text = ""
+            noteTextView.text = ""
+            tagNote = nil
+        } else {
+            DispatchQueue.main.async {
+                let selectedIndexPath = IndexPath(item: self.getTagNumber(), section: 0)
+                self.tagCollectionView.selectItem(at: selectedIndexPath, animated: false, scrollPosition: .left)
+            }
+            headerTextField.text = note.titleNote
+            noteTextView.text = note.descriptionNote
+            tagNote = note.tagNote
+        }
     }
 }
 

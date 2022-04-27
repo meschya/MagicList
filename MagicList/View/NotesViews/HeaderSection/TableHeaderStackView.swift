@@ -96,6 +96,7 @@ final class TableHeaderStackView: UIStackView {
     
     @objc private func addNoteClick() {
         let noteVC = NoteViewController()
+        noteVC.isEditingNote = false
         delegate?.viewScreen(noteVC)
     }
 }
