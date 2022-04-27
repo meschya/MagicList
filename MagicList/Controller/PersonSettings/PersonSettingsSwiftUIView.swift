@@ -18,7 +18,6 @@ struct PersonSettingsSwiftUIView: View {
                             .frame(width: 150, height: 150)
                             .clipShape(RoundedRectangle(cornerRadius: 10))
                             .rotationEffect(.degrees(person.rotation)).animation(.spring(response: 1, dampingFraction: 2, blendDuration: 1))
-
                         Spacer()
                         HStack {
                             Text(user.surName)
