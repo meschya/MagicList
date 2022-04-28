@@ -21,6 +21,8 @@ struct PersonInformation: View {
                         CoreDataManager.instance.savePerson(users)
 
                         presentationMode.wrappedValue.dismiss()
+                        guard let persons = CoreDataManager.instance.getPerson() else { return }
+                        self.person.user = persons
                     } label: {
                         Text("Save")
                             .foregroundColor(Color.theme.accent)
