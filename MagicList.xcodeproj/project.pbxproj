@@ -14,6 +14,8 @@
 		BF24DAC92819B0FE00A39EBA /* PersonInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF24DAC82819B0FE00A39EBA /* PersonInformation.swift */; };
 		BF24DACB2819B10600A39EBA /* ContactCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF24DACA2819B10600A39EBA /* ContactCell.swift */; };
 		BF24DAD42819B28900A39EBA /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF24DAD32819B28900A39EBA /* UserSettings.swift */; };
+		BF24DAD72819F3FA00A39EBA /* TodoStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF24DAD62819F3FA00A39EBA /* TodoStackView.swift */; };
+		BF24DAD92819F68800A39EBA /* ToDoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF24DAD82819F68800A39EBA /* ToDoView.swift */; };
 		BFF1FB8C2812C38300142235 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF1FB8B2812C38300142235 /* AppDelegate.swift */; };
 		BFF1FB8E2812C38300142235 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF1FB8D2812C38300142235 /* SceneDelegate.swift */; };
 		BFF1FB962812C38300142235 /* MagicList.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BFF1FB942812C38300142235 /* MagicList.xcdatamodeld */; };
@@ -63,6 +65,8 @@
 		BF24DAC82819B0FE00A39EBA /* PersonInformation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PersonInformation.swift; path = ../../../../../Desktop/MagicList/MagicList/Controller/PersonSettings/PersonInformation.swift; sourceTree = "<group>"; };
 		BF24DACA2819B10600A39EBA /* ContactCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContactCell.swift; path = ../../../../../Desktop/MagicList/MagicList/Controller/PersonSettings/ContactCell.swift; sourceTree = "<group>"; };
 		BF24DAD32819B28900A39EBA /* UserSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSettings.swift; sourceTree = "<group>"; };
+		BF24DAD62819F3FA00A39EBA /* TodoStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoStackView.swift; sourceTree = "<group>"; };
+		BF24DAD82819F68800A39EBA /* ToDoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoView.swift; sourceTree = "<group>"; };
 		BFF1FB882812C38300142235 /* MagicList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MagicList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFF1FB8B2812C38300142235 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BFF1FB8D2812C38300142235 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -122,8 +126,8 @@
 		353D8B5F2814CA6F00D52E72 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				353D8B6528154C1900D52E72 /* CustomCheckbox */,
 				353D8B602814CA8700D52E72 /* ToDoTableViewCell.swift */,
+				353D8B6528154C1900D52E72 /* CustomCheckbox */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -145,12 +149,14 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		BF24DAD52819BF5200A39EBA /* Todo */ = {
+		BF24DAD52819BF5200A39EBA /* TodoViews */ = {
 			isa = PBXGroup;
 			children = (
 				353D8B5F2814CA6F00D52E72 /* Cell */,
+				BF24DAD62819F3FA00A39EBA /* TodoStackView.swift */,
+				BF24DAD82819F68800A39EBA /* ToDoView.swift */,
 			);
-			path = Todo;
+			path = TodoViews;
 			sourceTree = "<group>";
 		};
 		BF55A6AE28187249009ED4FD /* Model */ = {
@@ -214,8 +220,8 @@
 		BFF1FBA32812C3FB00142235 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				BF24DAD52819BF5200A39EBA /* Todo */,
 				BFF1FBB02812C4A200142235 /* NotesViews */,
+				BF24DAD52819BF5200A39EBA /* TodoViews */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -465,6 +471,7 @@
 				353D8B612814CA8700D52E72 /* ToDoTableViewCell.swift in Sources */,
 				BF24DAC92819B0FE00A39EBA /* PersonInformation.swift in Sources */,
 				BFF1FBEC281374C000142235 /* NotesTableViewCell.swift in Sources */,
+				BF24DAD92819F68800A39EBA /* ToDoView.swift in Sources */,
 				BFF1FBE72813651700142235 /* NoteStackView.swift in Sources */,
 				BFF1FBEA28136F8400142235 /* NoteView.swift in Sources */,
 				BFF1FBB72812C4D400142235 /* TodoTableViewController.swift in Sources */,
@@ -473,6 +480,7 @@
 				BFF1FBB92812C4DD00142235 /* PersonSettingsSwiftUIView.swift in Sources */,
 				BFF1FBDC28130ADA00142235 /* UIStackView+.swift in Sources */,
 				DD6E935928173DAB003492D1 /* (null) in Sources */,
+				BF24DAD72819F3FA00A39EBA /* TodoStackView.swift in Sources */,
 				BFF1FBE128133E9600142235 /* TagCollectionViewCell.swift in Sources */,
 				BFF1FBAA2812C44500142235 /* MainTabBarController.swift in Sources */,
 				BFF1FBBC2812C5F300142235 /* NetworkingManager.swift in Sources */,

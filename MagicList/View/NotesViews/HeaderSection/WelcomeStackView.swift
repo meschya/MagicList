@@ -48,12 +48,6 @@ final class WelcomeStackView: UIStackView {
             self.addPersonImageSetups()
         }
     }
-    
-    override func layoutIfNeeded() {
-        super.layoutIfNeeded()
-        addPersonImageSetups()
-    }
-
     // MARK: - Constraints
     
     // MARK: Private

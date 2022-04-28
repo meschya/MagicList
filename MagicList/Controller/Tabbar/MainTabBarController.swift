@@ -7,7 +7,7 @@ final class MainTabBarController: UITabBarController {
     // MARK: Private
 
     private let notesTVC = UINavigationController(rootViewController: NotesTableViewController())
-    private let todoTVC = TodoTableViewController()
+    private let todoTVC = UINavigationController(rootViewController: TodoTableViewController())
     private let personSettingsSwiftUI = UIHostingController(rootView: PersonSettingsSwiftUIView())
 
     // MARK: - LIfecycle
