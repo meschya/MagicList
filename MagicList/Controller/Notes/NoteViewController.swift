@@ -2,8 +2,6 @@ import UIKit
 
 final class NoteViewController: UIViewController {
     // MARK: - Properties
-    // MARK: Public
-    public var editNote: Note = .init()
     
     // MARK: Private
 
@@ -30,7 +28,6 @@ final class NoteViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         configNavigationBar()
-        addEditNote()
     }
     
     // MARK: - API
@@ -206,11 +203,6 @@ final class NoteViewController: UIViewController {
         view.endEditing(true)
     }
     
-    private func addEditNote() {
-        headerTextField.text = editNote.titleNote!
-        tagNote = editNote.tagNote!
-        noteTextView.text = editNote.descriptionNote!
-    }
 }
 
 // MARK: - Helpers
