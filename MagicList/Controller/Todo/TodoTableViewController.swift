@@ -88,6 +88,7 @@ final class TodoTableViewController: UIViewController {
         searchController.obscuresBackgroundDuringPresentation = false
         searchController.searchBar.enablesReturnKeyAutomatically = false
         searchController.searchBar.returnKeyType = UIReturnKeyType.done
+        searchController.searchBar.searchTextField.leftView?.tintColor = .theme.accent
         definesPresentationContext = true
         
         navigationItem.searchController = searchController

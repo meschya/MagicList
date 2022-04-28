@@ -1,109 +1,108 @@
 {
   "images" : [
     {
-      "filename" : "Icon-Spotlight-42.png",
+      "filename" : "new_logo_bac_40-2.png",
       "idiom" : "iphone",
       "scale" : "2x",
       "size" : "20x20"
     },
     {
-      "filename" : "Icon-60.png",
+      "filename" : "new_logo_bac_60.png",
       "idiom" : "iphone",
       "scale" : "3x",
       "size" : "20x20"
     },
     {
-      "filename" : "Icon-Small@2x-1.png",
+      "filename" : "new_logo_bac_58-1.png",
       "idiom" : "iphone",
       "scale" : "2x",
       "size" : "29x29"
     },
     {
-      "filename" : "Icon-Small@3x.png",
+      "filename" : "new_logo_bac_87.png",
       "idiom" : "iphone",
       "scale" : "3x",
       "size" : "29x29"
     },
     {
-      "filename" : "Icon-Spotlight-40@2x-1.png",
+      "filename" : "new_logo_bac_80-1.png",
       "idiom" : "iphone",
       "scale" : "2x",
       "size" : "40x40"
     },
     {
-      "filename" : "Icon-Spotlight-40@3x.png",
+      "filename" : "new_logo_bac_120.png",
       "idiom" : "iphone",
       "scale" : "3x",
       "size" : "40x40"
     },
     {
-      "filename" : "Icon-60@2x-1.png",
       "idiom" : "iphone",
       "scale" : "2x",
       "size" : "60x60"
     },
     {
-      "filename" : "Icon-60@3x.png",
+      "filename" : "new_logo_bac_180.png",
       "idiom" : "iphone",
       "scale" : "3x",
       "size" : "60x60"
     },
     {
-      "filename" : "logo_background.png",
+      "filename" : "new_logo_bac_20.png",
       "idiom" : "ipad",
       "scale" : "1x",
       "size" : "20x20"
     },
     {
-      "filename" : "Icon-Spotlight-40.png",
+      "filename" : "new_logo_bac_40-1.png",
       "idiom" : "ipad",
       "scale" : "2x",
       "size" : "20x20"
     },
     {
-      "filename" : "Icon-Small 18.59.11.png",
+      "filename" : "new_logo_bac_29.png",
       "idiom" : "ipad",
       "scale" : "1x",
       "size" : "29x29"
     },
     {
-      "filename" : "Icon-Small@2x.png",
+      "filename" : "new_logo_bac_58.png",
       "idiom" : "ipad",
       "scale" : "2x",
       "size" : "29x29"
     },
     {
-      "filename" : "Icon-Spotlight-41.png",
+      "filename" : "new_logo_bac_40.png",
       "idiom" : "ipad",
       "scale" : "1x",
       "size" : "40x40"
     },
     {
-      "filename" : "Icon-Spotlight-40@2x.png",
+      "filename" : "new_logo_bac_80.png",
       "idiom" : "ipad",
       "scale" : "2x",
       "size" : "40x40"
     },
     {
-      "filename" : "Icon-76.png",
+      "filename" : "new_logo_bac_76.png",
       "idiom" : "ipad",
       "scale" : "1x",
       "size" : "76x76"
     },
     {
-      "filename" : "Icon-76@2x.png",
+      "filename" : "new_logo_bac_152.png",
       "idiom" : "ipad",
       "scale" : "2x",
       "size" : "76x76"
     },
     {
-      "filename" : "Icon-iPadPro@2x.png",
+      "filename" : "new_logo_bac_167.png",
       "idiom" : "ipad",
       "scale" : "2x",
       "size" : "83.5x83.5"
     },
     {
-      "filename" : "logo_background@2x.png",
+      "filename" : "new_logo_bac_1024.png",
       "idiom" : "ios-marketing",
       "scale" : "1x",
       "size" : "1024x1024"

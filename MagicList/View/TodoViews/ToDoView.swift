@@ -14,6 +14,7 @@ final class ToDoView: UIView {
     private let secondPersonImageView: UIImageView = .init()
     private let thirthyPersonImageView: UIImageView = .init()
     private let spacer: UIView = .init()
+    private let timeLabel: UILabel = .init()
 
     // MARK: - Initialization
     
@@ -92,6 +93,9 @@ final class ToDoView: UIView {
         thirthyPersonImageView.widthAnchor.constraint(equalTo: imageStackView.widthAnchor, multiplier: 0.1).isActive = true
         thirthyPersonImageView.widthAnchor.constraint(equalToConstant: 10).isActive = true
         thirthyPersonImageView.heightAnchor.constraint(equalToConstant: 10).isActive = true
+        
+        timeLabel.translatesAutoresizingMaskIntoConstraints = false
+        timeLabel.widthAnchor.constraint(equalTo: imageStackView.widthAnchor, multiplier: 0.15).isActive = true
     }
     
     // MARK: - Setups
@@ -107,7 +111,8 @@ final class ToDoView: UIView {
         imageStackView.addArrangedSubviews(personImageView,
                                            secondPersonImageView,
                                            thirthyPersonImageView,
-                                           spacer)
+                                           spacer,
+                                           timeLabel)
     }
     
     private func addSetups() {
@@ -116,6 +121,7 @@ final class ToDoView: UIView {
         addTitleAndCheckBoxSVSetups()
         addTitleLabelSetups()
         addTodoSwitchSetups()
+        addTimeLabelSetups()
         addImageStackViewSetups()
     }
     
@@ -149,6 +155,12 @@ final class ToDoView: UIView {
         titleLabel.textColor = .theme.title
         titleLabel.font = .altone(25, .bold)
         titleLabel.numberOfLines = 2
+    }
+    
+    private func addTimeLabelSetups() {
+        timeLabel.text = "\(Int.random(in: 0..<23)):\(Int.random(in: 0..<5))\(Int.random(in: 0..<9))"
+        timeLabel.textColor = .theme.title
+        timeLabel.font = .altone(15, .light)
     }
     
     private func addTodoSwitchSetups() {
